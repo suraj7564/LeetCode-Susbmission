@@ -10,35 +10,37 @@
  */
 class Solution {
 public:
-    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-        ListNode *Temp = new ListNode(-1);
-        ListNode *temp = Temp;
+    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+        ListNode *ans= new ListNode(-1);
+        ListNode *t=ans;
         int x;
-        while(l1&&l2){
-            if(l1->val<=l2->val){
-                x=l1->val;
-                l1=l1->next;
+        while(list1&&list2){
+            if(list1->val<=list2->val){
+                x=list1->val;
+                list1=list1->next;
             }
             else{
-                x=l2->val;
-                l2=l2->next;
+                x=list2->val;
+                list2=list2->next;
             }
-            ListNode* t = new ListNode(x);
-            Temp->next=t;
-            Temp = Temp->next;
+            ListNode* temp=new ListNode(x);
+            t->next=temp;
+            t=t->next;
         }
-        while(l1){
-            ListNode* t = new ListNode(l1->val);
-            l1=l1->next;
-            Temp->next=t;
-            Temp = Temp->next;
+        while(list1){
+            x=list1->val;
+            list1=list1->next;
+            ListNode* temp=new ListNode(x);
+            t->next=temp;
+            t=t->next;
         }
-        while(l2){
-            ListNode* t = new ListNode(l2->val);
-            l2=l2->next;
-            Temp->next=t;
-            Temp = Temp->next;
+        while(list2){
+            x=list2->val;
+            list2=list2->next;
+            ListNode* temp=new ListNode(x);
+            t->next=temp;
+            t=t->next;
         }
-        return temp->next;
+        return ans->next;
     }
 };
