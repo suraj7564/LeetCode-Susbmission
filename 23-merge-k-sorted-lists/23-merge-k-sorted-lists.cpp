@@ -27,6 +27,6 @@ public:
             t->next = tt;
             t = t->next;
         }
-        return res->next;
+        return res->next;;
     }
 };
