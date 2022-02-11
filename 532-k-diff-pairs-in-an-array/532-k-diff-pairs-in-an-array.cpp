@@ -4,15 +4,15 @@ public:
         int cnt=0;
         sort(nums.begin(),nums.end());
         map<int,int> m;
-        for(int x:nums){
-            if(m.count((x-k))&&m[x]==0){
+        for(auto x:nums){
+            if(m[x-k]&&!m[x]){
                 cnt++;
             }
             m[x]++;
         }
-        if(k==0){
-            for(auto x:m){
-                if(x.second>=2) cnt++;
+        for(auto x:m){
+            if(k==0&&x.second>=2){
+                cnt++;
             }
         }
         return cnt;
