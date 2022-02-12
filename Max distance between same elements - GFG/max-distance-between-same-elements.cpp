@@ -6,16 +6,16 @@ using namespace std;
 class Solution{
     public:
     // your task is to complete this function
-    int maxDistance(int arr[], int n)
+    int maxDistance(int a[], int n)
     {
+        unordered_map<int,int> m;
         int ans=0;
-        map<int,int> m;
         for(int i=0;i<n;i++){
-            if(m.count(arr[i])){
-                ans=max(ans,i-m[arr[i]]);
+            if(m.count(a[i])){
+                ans=max(ans,i-m[a[i]]);
             }
             else{
-                m[arr[i]]=i;
+                m[a[i]]=i;
             }
         }
         return ans;
