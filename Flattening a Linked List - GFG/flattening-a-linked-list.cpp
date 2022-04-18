@@ -146,11 +146,14 @@ Node* merge(Node* a,Node* b){
     the flattened linked list. */
 Node *flatten(Node *head)
 {
-   if(!head||!head->next) return head;
+   if(head==NULL||head->next==NULL) return head;
 	
-	head->next = flatten(head->next);
-	
-	head = merge(head,head->next);
-	return head;
+	Node *ans = new Node(0);
+	Node *temp = head;
+	while(temp){
+		ans = merge(ans,temp);
+		temp = temp->next;
+	}
+	return ans->bottom;
 }
 
