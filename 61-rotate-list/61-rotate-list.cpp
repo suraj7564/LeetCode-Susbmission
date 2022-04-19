@@ -11,50 +11,28 @@
 class Solution {
 public:
     ListNode* rotateRight(ListNode* head, int k) {
-        ListNode *temp = head, *ptr = head;
-        
-		// if  list is empty return NULL
-        if(head == NULL)
-            return NULL;
-			
-        // if  list contain 1 node return NULL
-        if(head -> next == NULL)
-            return head;
-        
-        int cnt = 1;
-        
-		// counting nodes in list
-        while(temp->next != NULL)
-        {
-            temp = temp -> next;
-            cnt++;
+        if(!head||!head->next) return head;
+        int len = 0;
+        ListNode *temp = head;
+        while(temp){
+            len++;
+            temp = temp->next;
         }
-		
-		// mod of k with cnt to find the minimum no of rotations.
-        k = k % cnt;
-        while(k-->0)
-        {
-            while(temp->next != NULL)
-                temp = temp -> next;
-        
-            temp -> next = head;           //making it a circular linked list
-			
-			// making last node the new head
-            head = temp;
-            ptr = temp;
-			
-			// moving list values one by one
-            while(temp -> next != head)
-            {
-                temp = temp -> next;
-            }
-            
-			// adding NULL at end of list
-            temp -> next = NULL;
-			
-            temp = ptr;
-            
+        k = k%len;
+        if(k==0) return head;
+        k = len-k;
+        ListNode *t = head,*pre;
+        while(k>0){
+            k--;
+            pre = t;
+            t = t->next;
         }
-        return head;
+        pre->next = NULL;
+        temp = t;
+        while(temp->next){
+            temp = temp->next;
+        }
+        temp -> next = head;
+        return t;
     }
 };
