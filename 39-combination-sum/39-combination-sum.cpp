@@ -1,23 +1,22 @@
 class Solution {
 public:
-   void find(vector<int> ca,int curpos,int cursum,int target,vector<vector<int>>& ans,vector<int>& cur){
-       if(cursum>target){
-           return;
-       }
-       if(cursum==target){
-           ans.push_back(cur);
-           return;
-       }
-       for(int i=curpos;i<ca.size();i++){
-           cur.push_back(ca[i]);
-           find(ca,i,cursum+ca[i],target,ans,cur);
-           cur.pop_back();
-       }
-   }
-    vector<vector<int>> combinationSum(vector<int>& c, int t) {
-        vector<vector<int>> ans;
+    void solve(vector<int>& arr,vector<int>& cur,int idx,int n,int k,vector<vector<int>>& ans){
+        if(k==0){
+            ans.push_back(cur);
+            return;
+        }
+        if(k<0) return;
+        for(int i=idx;i<n;i++){
+            cur.push_back(arr[i]);
+            solve(arr,cur,i,n,k-arr[i],ans);
+            cur.pop_back();
+        }
+    }
+    vector<vector<int>> combinationSum(vector<int>& arr, int k) {
+        int n = arr.size();
         vector<int> cur;
-        find(c,0,0,t,ans,cur);
+        vector<vector<int>> ans;
+        solve(arr,cur,0,n,k,ans);
         return ans;
     }
 };
