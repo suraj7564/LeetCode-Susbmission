@@ -10,55 +10,27 @@ using namespace std;
 
 class Solution{
     public:
-    int dx[4] = {1,-1,0,0};
-    int dy[4] = {0,0,1,-1};
-    bool isvalid(int i,int j,int n){
-        if(i<0||j<0||i>=n||j>=n) return false;
-        return true;
-    }
-    void dfs(vector<vector<int>>& m,int i,int j,int n,vector<string>& ans,string &cur,vector<vector<bool>>& vis){
-        if(i<0||j<0||i>=n||j>=n) return;
-        if(i==n-1&&j==n-1){
-            ans.push_back(cur);
+    void solve(vector<vector<int>>& m,int x,int y,int n,string s,vector<string>& ans,vector<vector<bool>>& vis){
+        if(x<0||y<0||x>=n||y>=n||m[x][y]==0||vis[x][y]) return;
+        //cout<<s<<endl;
+        if(x==n-1&&y==n-1){
+            ans.push_back(s);
             return;
         }
-        for(int p=0;p<4;p++){
-            int x=dx[p]+i;
-            int y=dy[p]+j;
-            if(isvalid(x,y,n)&&m[x][y]==1&&!vis[x][y]){
-                vis[x][y]=true;
-                if(p==0){
-                    cur.push_back('D');
-                    dfs(m,x,y,n,ans,cur,vis);
-                    cur.pop_back();
-                }
-                else if(p==1){
-                    cur.push_back('U');
-                    dfs(m,x,y,n,ans,cur,vis);
-                    cur.pop_back();
-                }
-                else if(p==2){
-                    cur.push_back('R');
-                    dfs(m,x,y,n,ans,cur,vis);
-                    cur.pop_back();
-                }
-                else{
-                    cur.push_back('L');
-                    dfs(m,x,y,n,ans,cur,vis);
-                    cur.pop_back();
-                }
-                vis[x][y]=false;
-            }
-        }
+        vis[x][y] = true;
+        solve(m,x+1,y,n,s+"D",ans,vis);
+        solve(m,x,y+1,n,s+"R",ans,vis);
+        solve(m,x-1,y,n,s+"U",ans,vis);
+        solve(m,x,y-1,n,s+"L",ans,vis);
+        vis[x][y] = false;
     }
     vector<string> findPath(vector<vector<int>> &m, int n) {
         // Your code goes here
         vector<string> ans;
-        string cur="";
-        vector<vector<bool>> vis(n,vector<bool>(n,false));
-        vis[0][0]=true;
+        string cur = "";
         if(m[0][0]==0||m[n-1][n-1]==0) return ans;
-        dfs(m,0,0,n,ans,cur,vis);
+        vector<vector<bool>> vis(n,vector<bool>(n,false));
+        solve(m,0,0,n,cur,ans,vis);
         return ans;
     }
 };
