@@ -100,32 +100,20 @@ class Solution {
     	vector<int> ans;
     	queue<pair<Node*,int>> q;
     	q.push({root,0});
-    	vector<vector<pair<int,int>>> temp;
+        map<int,int> m;
     	while(!q.empty()){
-    		vector<pair<int,int>> cur;
     		int sz = q.size();
     		while(sz-->0){
     			auto curNode = q.front().first;
     			int line = q.front().second;
     			q.pop();
-    			cur.push_back({line,curNode->data});
+    			m[line] = curNode->data;
     			if(curNode->left) q.push({curNode->left,line-1});
     			if(curNode->right) q.push({curNode->right,line+1});
     		}
-    		temp.push_back(cur);
+    		
     	}
-    	vector<pair<int,int>> ans1;
-    	map<int,int> m;
-    	for(int i=temp.size()-1;i>=0;i--){
-    		for(int j=temp[i].size()-1;j>=0;j--){
-    			if(!m.count(temp[i][j].first)){
-    				ans1.push_back(temp[i][j]);
-    			}
-    			m[temp[i][j].first] = 1;
-    		}
-    	}
-    	sort(ans1.begin(),ans1.end());
-    	for(auto x:ans1){
+    	for(auto x:m){
     		ans.push_back(x.second);
     	}
     	return ans;
