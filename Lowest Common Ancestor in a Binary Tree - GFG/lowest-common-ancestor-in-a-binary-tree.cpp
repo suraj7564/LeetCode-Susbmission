@@ -38,46 +38,19 @@ class Solution
 {
     public:
     //Function to return the lowest common ancestor in a Binary Tree.
-    vector<int> v1,v2;int x,y;
-    void findPath(Node* root,vector<int> ans){
-        if(!root) return ;
-        ans.push_back(root->data);
-        if(root->data==x) v1=ans;
-        if(root->data==y) v2=ans;
-        findPath(root->left,ans);
-        findPath(root->right,ans);
-    }
     Node* lca(Node* root ,int n1 ,int n2 )
     {
-       //Your code here 
-       vector<int> a,b;
-       x=n1,y=n2;
-       findPath(root,a);
-    //   for(auto x:v1){
-    //       cout<<x<<" ";
-    //   }
-    //   cout<<endl;
-    //   for(auto x:v2){
-    //       cout<<x<<" ";
-    //   }
-    //   cout<<endl;
-       int ans = -1;
-       for(int i=0,j=0;i<v1.size()&&j<v2.size();i++,j++){
-           if(v1[i]==v2[j]) ans = v1[i];
-           else break;
-       }
-       //cout<<ans<<" ";
-       Node *res=root;
-       queue<Node*> q;
-       q.push(res);
-       while(!q.empty()){
-           auto t = q.front();
-           q.pop();
-           if(t->data==ans) return t;
-           if(t->left) q.push(t->left);
-           if(t->right) q.push(t->right);
-       }
-        return NULL;
+       if(!root) return NULL;
+       
+       if(root->data==n1||root->data==n2) return root;
+       
+       Node *leftLCA = lca(root->left,n1,n2);
+       Node *rightLCA = lca(root->right,n1,n2);
+       
+       if(leftLCA&&rightLCA) return root;
+       
+       if(leftLCA) return leftLCA;
+       return rightLCA;
     }
 };
 
