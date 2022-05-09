@@ -11,19 +11,11 @@
  */
 class Solution {
 public:
-    bool b=true;
-    void find(TreeNode* p, TreeNode* q){
-        if(p==nullptr&&q==nullptr) return;
-        if(p==nullptr||q==nullptr){
-            b=false;
-            return;
-        }
-        if(p->val!=q->val) b=false;
-        find(p->left,q->left);
-        find(p->right,q->right);
-    }
     bool isSameTree(TreeNode* p, TreeNode* q) {
-        find(p,q);
-        return b;
+        if(!p&&!q) return true;
+        
+        if(!p||!q) return false;
+        
+        return ((p->val==q->val)&&isSameTree(p->left,q->left)&&isSameTree(p->right,q->right));
     }
 };
