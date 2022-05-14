@@ -12,26 +12,19 @@
 class Solution {
 public:
     vector<int> v;
-    void help(TreeNode* root){
+    void help(TreeNode* root,int k,int &cnt,int &ans){
         if(!root) return;
-        help(root->left);
-        v.push_back(root->val);
-        help(root->right);
+        help(root->left,k,cnt,ans);
+        cnt++;
+        if(cnt==k){
+            ans = root->val;
+            return;
+        }
+        help(root->right,k,cnt,ans);
     }
     int kthSmallest(TreeNode* root, int k) {
-        help(root);
-        int ans=0;
-        int cnt=1;
-        sort(v.begin(),v.end());
-        if(k==1) return v[0];
-        int n=v.size();
-        for(int i=1;i<n;i++){
-            if(v[i]!=v[i-1]) cnt++;
-            if(cnt==k){
-                ans=v[i];
-                break;
-            }
-        }
+        int cnt = 0,ans = -1;
+        help(root,k,cnt,ans);
         return ans;   
     }
 };
