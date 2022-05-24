@@ -1,12 +1,17 @@
 class Solution {
 public:
     int find(vector<vector<int>>& cur,int i){
-        for(int j=i-1;j>=0;j--){
-            if(cur[j][1]<=cur[i][0]){
-                return j;
+        int l = 0, r = i;
+        while(l<r){
+            int m = (l+r)/2;
+            if(cur[i][0]>=cur[m][1]){
+                l = m+1;
+            }
+            else{
+                r = m;
             }
         }
-        return -1;
+        return l;
     }
     int jobScheduling(vector<int>& startTime, vector<int>& endTime, vector<int>& profit) {
         
@@ -30,8 +35,8 @@ public:
             
             int preNonOverlape = find(cur,i);
             
-            if(preNonOverlape!=-1){
-                curProfit += dp[preNonOverlape];
+            if(preNonOverlape>0){
+                curProfit += dp[preNonOverlape-1];
             }
             
             dp[i] = max(curProfit,dp[i-1]);
