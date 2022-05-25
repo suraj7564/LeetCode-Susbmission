@@ -1,5 +1,5 @@
 # Longest Palindromic Substring
-## Medium 
+##  Medium 
 <div class="problem-statement">
                 <p></p><p><span style="font-size:18px">Given a string S, find the longest palindromic substring in S.<strong> Substring of string S:</strong></span><span style="font-size:18px"> S[ i . . . . j ]&nbsp;where 0&nbsp;≤ i&nbsp;≤ j &lt; len(S)<strong>. Palindrome string:</strong></span><span style="font-size:18px"> A string which reads the same backwards. More formally, S is palindrome if reverse(S) = S.</span><span style="font-size:18px"><strong> Incase of conflict</strong>, return the substring which occurs first ( with the least starting index ).</span></p>
 
