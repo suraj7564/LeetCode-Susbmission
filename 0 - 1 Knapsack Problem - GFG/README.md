@@ -2,7 +2,7 @@
 ## Medium 
 <div class="problem-statement">
                 <p></p><p><span style="font-size:18px">You are given weights and values of <strong>N</strong> items, put these items in a knapsack of capacity <strong>W</strong> to get the maximum total value in the knapsack. Note that we have only <strong>one quantity of each item</strong>.<br>
-In other words, given two integer arrays <strong>val[0..N-1]</strong> and <strong>wt[0..N-1]</strong> which represent values and weights associated with <strong>N</strong> items respectively. Also given an integer W which represents knapsack capacity, find out the maximum value subset of <strong>val[]</strong> such that sum of the weights of this subset is smaller than or equal to <strong>W.</strong> You cannot break an item, <strong>either pick the complete item or don’t pick it (0-1 property)</strong>.</span></p>
+In other words, given two integer arrays <strong>val[0..N-1]</strong> and <strong>wt[0..N-1]</strong> which represent values and weights associated with <strong>N</strong> items respectively. Also given an integer W which represents knapsack capacity, find out the maximum value subset of <strong>val[]</strong> such that sum of the weights of this subset is smaller than or equal to <strong>W.</strong> You cannot break an item, <strong>either pick the complete item or dont pick it (0-1 property)</strong>.</span></p>
 
 <p><strong><span style="font-size:18px">Example 1:</span></strong></p>
 
