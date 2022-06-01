@@ -36,14 +36,19 @@ class Solution
     struct Node* reverseList(struct Node *head)
     {
         if(!head||!head->next) return head;
-        Node *pre = NULL, *cur = head,*nxt;
-        while(cur){
-            nxt = cur->next;
-            cur->next = pre;
-            pre = cur;
-            cur = nxt;
-        }
-        return pre;
+        // Node *pre = NULL, *cur = head,*nxt;
+        // while(cur){
+        //     nxt = cur->next;
+        //     cur->next = pre;
+        //     pre = cur;
+        //     cur = nxt;
+        // }
+        // return pre;
+        
+        Node* nnode = reverseList(head->next);
+        head->next->next = head;
+        head->next = NULL;
+        return nnode;
     }
     
 };
