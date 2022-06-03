@@ -4,31 +4,33 @@ using namespace std;
 
  // } Driver Code Ends
 class Solution{
-		
+	
+	int find(string str1,string str2,int i,int j,int n,int m,vector<vector<int>>& dp){
+	    if(i==n||j==m) return 0;
+	    
+	    if(dp[i][j]!=-1) return dp[i][j];
+	    
+	    
+	    if(str1[i]==str2[j]){
+	        dp[i][j] = 1 + find(str1,str2,i+1,j+1,n,m,dp);
+	    }
+	    else{
+	        dp[i][j] = max(find(str1,str2,i,j+1,n,m,dp),find(str1,str2,i+1,j,n,m,dp));
+	    }
+	    return dp[i][j];
+	}	
 
 	public:
-	int minOperations(string a, string b) 
+	int minOperations(string str1, string str2) 
 	{ 
-	    int n=a.length();
-        int m=b.length();
-        int t[n+1][m+1];
-        for(int i=0;i<=n;i++)
-            t[i][0]=0;
-        for(int i=0;i<=m;i++)
-            t[0][i]=0;
-        for(int i=1;i<=n;i++)
-        {
-            for(int j=1;j<=m;j++)
-            {
-                if(a[i-1]==b[j-1])
-                    t[i][j]=1+t[i-1][j-1];
-                else
-                    t[i][j]=max(t[i][j-1],t[i-1][j]);
-            }
-        }
-        int ans=n+m-2*t[n][m];
-        return ans;
 	    
+	    int n = str1.length();
+	    int m = str2.length();
+	    vector<vector<int>> dp(n,vector<int>(m,-1));
+	    int lcs = find(str1,str2,0,0,n,m,dp);
+	    int del = m-lcs;
+	    int ist = n-lcs;
+	    return del+ist;
 	} 
 };
 
