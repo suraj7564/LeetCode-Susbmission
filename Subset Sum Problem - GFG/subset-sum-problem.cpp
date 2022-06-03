@@ -11,14 +11,39 @@ class Solution{
 public:
     bool isSubsetSum(vector<int>arr, int sum){
         // code here '
-        vector<int> dp(sum+1,0);
-        dp[0] = 1;
-        for(int i=0;i<arr.size();i++){
-            for(int j=sum;j>=arr[i];j--){
-                if(dp[j-arr[i]]) dp[j] = 1;
+        int size = arr.size();
+        bool dp[size+1][sum+1];
+
+
+        // base case initialization
+    
+        for(int i=0; i<=size; i++){
+            dp[i][0] = true;
+        }
+        
+        for(int j=1;j<=sum;j++){
+            dp[0][j] = false;
+        }
+    
+        // filling of table
+        
+        for(int i=1;i<=size;i++){
+            for(int j=1;j<=sum;j++){
+                if(arr[i-1]<=j)
+                    dp[i][j]= (dp[i-1][j-arr[i-1]] || dp[i-1][j]);
+                else
+                    dp[i][j]= dp[i-1][j];
             }
         }
-        return dp[sum]==1;
+        //printing of table
+        // for(int i=0;i<=size;i++){
+        //     for(int j=0;j<=sum;j++){
+        //         cout<<dp[i][j]<<" ";
+        //     }
+        //     cout<<endl;
+        // }
+        // cout<<endl;
+        return dp[size][sum];
     }
 };
 
