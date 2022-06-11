@@ -1,25 +1,26 @@
 class Solution {
 public:
     int minOperations(vector<int>& nums, int x) {
-        long long sum=0;
-        for(int x:nums){
-            sum+=(long long)x;
-        }
-        if(sum==x) return nums.size();
-        long long k=sum-x;
-        unordered_map<long long,long long> m;
-        m[0]=-1;
-        sum=0;
-        int n=nums.size();
-        int ans=0;
+        int cnt = 0 ,sum = 0;
+        map<int,int> m;
+        int n = nums.size();
+        int total = 0;
         for(int i=0;i<n;i++){
-            sum+=(long)nums[i];
-            if(m.count(sum-k)){
-                ans=max(ans,(int)(i-m[sum-k]));
-            }
-            if(!m.count(sum)) m[sum]=i;
+            total += nums[i];
         }
-        if(ans==0) return -1;
-        return n-ans;
+        if(total==x) return n;
+        m[0] = -1;
+        x = total-x;
+        int ans = n+1;
+        for(int i=0;i<n;i++){
+            sum += nums[i];
+            if(m.count(sum-x)){
+                ans = min(ans,n-(i-m[sum-x]));
+            }
+            m[sum] = i;
+        }
+        if(ans==n+1) ans = -1;
+        
+        return ans;
     }
 };
