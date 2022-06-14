@@ -24,25 +24,25 @@ public:
     
         int length = lengthOfLinkedList(head);
 
-        ListNode* dummyHead = new ListNode(0);
-        dummyHead->next = head;
-
-        ListNode* pre = dummyHead;
-        ListNode* cur;
-        ListNode* nex;
-
-        while(length >= k) {
+        ListNode* dummyNode = new ListNode(0);
+        
+        dummyNode->next = head;
+        
+        ListNode*pre = dummyNode,*cur,*nxt;
+        
+        while(length>=k){
             cur = pre->next;
-            nex = cur->next;
-            for(int i=1;i<k;i++) {
-                cur->next = nex->next;
-                nex->next = pre->next;
-                pre->next = nex;
-                nex = cur->next;
+            nxt = cur->next;
+            int p = k-1;
+            while(cur&&p-->0){
+                cur->next = nxt->next;
+                nxt->next = pre->next;
+                pre->next = nxt;
+                nxt = cur->next;
             }
             pre = cur;
-            length -= k;
+            length-=k;
         }
-        return dummyHead->next;
+        return dummyNode->next;
     }
 };
