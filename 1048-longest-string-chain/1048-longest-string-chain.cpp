@@ -4,7 +4,7 @@ public:
         sort(words.begin(),words.end(),[&](string &a, string &b){
             return a.length()<b.length();
         });
-        map<string,int> dp;
+        unordered_map<string,int> dp;
         int mx = 0;
         for(int i=0;i<words.size();i++){
             string cur = words[i];
