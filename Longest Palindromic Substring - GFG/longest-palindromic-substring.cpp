@@ -13,20 +13,21 @@ public:
         // code here 
         string ans = "";
         ans += s[0];
-        int l = 0,r = 0;
+        int l = 1;
         int n = s.length();
-        vector<vector<bool>> dp(n+1,vector<bool>(n+1,false));
-        for(int i=0;i<=n;i++){
-            dp[i][0] = dp[i][1] = true;
-        }
-        for(int i=2;i<=n;i++){
-            for(int j=i;j<=n;j++){
-                if(s[j-1]==s[j-i]&&dp[j-1][i-2]){
-                    dp[j][i] = true;
-                    if(i>ans.length())
-                    ans = s.substr(j-i,i);
+        int dp[n+1][n+1];
+        for(int l=0;l<=n;l++){
+            for(int i=0;i<=n-l;i++){
+                if(l<=1) dp[l][i] = 1;
+                else{
+                    if(s[i]==s[i+l-1]&&dp[l-2][i+1]==1){
+                        dp[l][i] = 1;
+                        if(l>ans.length()){
+                            ans = s.substr(i,l);
+                        }
+                    }
+                    else dp[l][i] = 0;
                 }
-                else dp[j][i] = false;
             }
         }
         return ans;
