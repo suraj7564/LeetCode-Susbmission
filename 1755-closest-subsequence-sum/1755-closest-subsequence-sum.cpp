@@ -30,8 +30,10 @@ public:
             auto idx = s1.lower_bound(goal-sum);
             if(idx!=s1.end())
                 ans = min(ans,abs(goal-(sum+(*idx))));
-            idx--;
-            ans = min(ans,abs(goal-(sum+(*idx))));
+            if(idx!=s1.begin()){
+                idx--;
+                ans = min(ans,abs(goal-(sum+(*idx))));
+            }
         }
         return ans;
     }
