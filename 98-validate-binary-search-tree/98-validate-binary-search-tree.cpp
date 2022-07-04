@@ -11,13 +11,14 @@
  */
 class Solution {
 public:
-    bool isValidBST(TreeNode* root, TreeNode* minNode, TreeNode* maxNode) {
+    bool check(TreeNode* root,TreeNode* l,TreeNode* r){
         if(!root) return true;
-        if(minNode && root->val <= minNode->val || maxNode && root->val >= maxNode->val)
-            return false;
-        return isValidBST(root->left, minNode, root) && isValidBST(root->right, root, maxNode);
+        
+        if(l&&l->val>=root->val||r&&r->val<=root->val) return false;
+        
+        return (check(root->left,l,root)&&check(root->right,root,r));
     }
     bool isValidBST(TreeNode* root) {
-        return isValidBST(root,NULL,NULL);
+        return check(root,NULL,NULL);
     }
 };
