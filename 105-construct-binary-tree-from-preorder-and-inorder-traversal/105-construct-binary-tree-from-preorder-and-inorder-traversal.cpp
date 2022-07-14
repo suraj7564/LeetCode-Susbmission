@@ -16,9 +16,11 @@ public:
         if(st>end) return NULL;
         
         TreeNode* temp = new TreeNode(pre[idx++]);
+        
         if(st==end){
             return temp;
         }
+        
         int m = mp[temp->val];
         temp->left = find(pre,in,idx,st,m-1);
         temp->right = find(pre,in,idx,m+1,end);
