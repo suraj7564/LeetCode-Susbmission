@@ -1,12 +1,14 @@
 class Solution {
 public:
     int combinationSum4(vector<int>& nums, int t) {
-        vector<unsigned int> dp(t+1,0);
-        dp[0]=1;
+        int n = nums.size();
+        vector<long long> dp(t+1,0);
+        dp[0] = 1;
         for(int i=0;i<=t;i++){
-            for(auto x:nums){
-                if(i-x>=0&&dp[i-x]){
-                    dp[i]+=dp[i-x];
+            for(int j=0;j<n;j++){
+                if(dp[i]>INT_MAX) continue;
+                if(i-nums[j]>=0){
+                    dp[i] += dp[i-nums[j]];
                 }
             }
         }
