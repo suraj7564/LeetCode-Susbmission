@@ -1,10 +1,28 @@
 class Solution {
 public:
     int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
+        unordered_map<string,vector<string>> adj;
+        unordered_map<string,int> m;
+        for(auto x:wordList){
+            m[x] = 1;
+        }
+        m[beginWord] = 1;
+        for(auto x:m){
+            string s = x.first;
+            for(int i=0;i<s.length();i++)
+            for(int j=0;j<26;j++){
+                char ch = (char)(j+'a');
+                string ss = s.substr(0,i);
+                ss += ch;
+                ss += s.substr(i+1);
+                if(ch!=s[i] && m.find(ss)!=m.end()){
+                    adj[s].push_back(ss);
+                }
+            }
+        }
         queue<string> q;
         q.push(beginWord);
-        int n=wordList.size();
-        vector<bool> vis(n,false);
+        map<string, int> vis;
         int cnt=1;
         while(!q.empty()){
             int sz=q.size();
@@ -14,18 +32,10 @@ public:
                 if(t==endWord){
                     return cnt;
                 }
-                for(int i=0;i<n;i++){
-                    if(vis[i]) continue;
-                    int c=0;
-                    string cur=wordList[i];
-                    for(int j=0;j<cur.length();j++){
-                        if(cur[j]!=t[j]){
-                            c++;
-                        }
-                    }
-                    if(c==1){
-                        vis[i]=true;
-                        q.push(cur);
+                for(auto x:adj[t]){
+                    if(!vis[x]){
+                        q.push(x);
+                        vis[x] = 1;
                     }
                 }
             }
