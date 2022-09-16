@@ -1,35 +1,36 @@
 class Solution {
 public:
+    #define ll long long
     int countPaths(int n, vector<vector<int>>& roads) {
-        vector<long long> dp(n, 0);
-        vector<long long> t(n, 1e17);
-        t[0] = 0, dp[0] = 1;
-        int mod = 1e9+7;
-        vector<vector<pair<int,int>>> adj(n);
+        int mod=1000000007;
+        vector<pair<ll,ll>> adj[n];
         for(auto x:roads){
-            int u = x[0], v = x[1], w = x[2];
-            adj[u].push_back({v, w});
-            adj[v].push_back({u, w});
+            adj[x[0]].push_back({(ll)x[1],(ll)x[2]});
+            adj[x[1]].push_back({(ll)x[0],(ll)x[2]});
         }
-        priority_queue<vector<long long>, vector<vector<long long>>, greater<vector<long long>>> pq;
-        pq.push({0, 0});
+        vector<ll> dis(n,1e17);
+        vector<ll> path(n,0);
+        priority_queue<pair<ll,ll>,vector<pair<ll,ll>>,greater<pair<ll,ll>>> pq;
+        pq.push({0,0});
+        dis[0]=0;
+        path[0]=1;
         while(!pq.empty()){
-            long long cur = pq.top()[1];
-            long long curW = pq.top()[0];
+            int cur=pq.top().second;
+            long long d=pq.top().first;
             pq.pop();
             for(auto x:adj[cur]){
-                long long node = x.first;
-                long long w = x.second;
-                if(t[node]> w + curW){
-                    dp[node] = dp[cur];
-                    t[node] = w+curW;
-                    pq.push({t[node], node});
+                int node=x.first;
+                long long cost=x.second;
+                if(dis[node]>d+cost){
+                    pq.push({d+cost,node});
+                    dis[node]=d+cost;
+                    path[node]=path[cur]%mod;
                 }
-                else if(t[node] == w + curW){
-                    dp[node] = (dp[node] + dp[cur])%mod; 
+                else if(dis[node]==d+cost){
+                    path[node]=(path[node]%mod+path[cur]%mod)%mod;
                 }
             }
         }
-        return dp[n-1]%mod;;
+        return (int)path[n-1]%mod;
     }
 };
