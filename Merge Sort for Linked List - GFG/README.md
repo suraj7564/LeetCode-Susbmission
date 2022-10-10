@@ -1,7 +1,6 @@
 # Merge Sort for Linked List
-## Medium 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given Pointer/Reference to the head of the linked list, the task is to <strong>Sort the given linked list using Merge Sort</strong>.</span><br>
+## Medium
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given Pointer/Reference to the head of the linked list, the task is to <strong>Sort the given linked list using Merge Sort</strong>.</span><br>
 <span style="font-size:18px"><strong>Note:</strong>&nbsp;If the length of linked list is odd, then the&nbsp;extra node should go in the first list while splitting.</span></p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
@@ -33,9 +32,7 @@ linked list , resultant will be
 <strong>Expected Auxiliary Space:</strong>&nbsp;O(N)</span></p>
 
 <p><span style="font-size:18px"><strong>Constraints:</strong><br>
-1 &lt;= T &lt;= 100<br>
 1 &lt;= N &lt;= 10<sup>5</sup></span></p>
 
 <p>&nbsp;</p>
- <p></p>
-            </div>
+</div>
