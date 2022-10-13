@@ -105,13 +105,12 @@ void traverse(Node *root, Node *p, int d){
         if(d == -1) p->left = NULL;
         if(d == 1) p->right = NULL;
         if(head == NULL){
-            head = new Node(root->data);
+            head = root;
             pre = head;
         }
         else{
-            Node *cur = new Node(root->data);
-            pre->right = cur;
-            cur->left = pre;
+            pre->right = root;
+            root->left = pre;
             pre = pre->right;
         }
         return;
