@@ -1,9 +1,8 @@
 # Array Removals
-## Medium 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given an array arr[] of size N and an integer K. The task is to&nbsp;find the minimum number of elements that should be removed, such that <strong>A<sub>max</sub>-A<sub>min</sub>&lt;=K.</strong> After the removal of elements, A<sub>max</sub>&nbsp;and A<sub>min</sub>&nbsp;is considered among the remaining elements.&nbsp;</span></p>
+## Medium
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given an array <strong>arr[]</strong> of size <strong>N</strong> and an integer <strong>K</strong>. The task is to&nbsp;find the minimum number of elements that should be removed, such that <strong>A<sub>max</sub>-A<sub>min</sub>&lt;=K.</strong> After the removal of elements, A<sub>max</sub>&nbsp;and A<sub>min</sub>&nbsp;is considered among the remaining elements.&nbsp;</span></p>
 
-<p><strong><span style="font-size:18px">Note:&nbsp;</span></strong><span style="font-size:18px">Can you solve the probelm without using any extra space and O(N*log(N)) time complexity ?</span></p>
+<p><strong><span style="font-size:18px">Note:&nbsp;</span></strong><span style="font-size:18px">Can you solve the probelm without using any extra space and O(N*log(N)) time complexity?</span></p>
 
 <p><strong><span style="font-size:18px">Example 1:</span></strong></p>
 
@@ -32,9 +31,4 @@ You don't need to read input or print anything. Your task is to complete the fun
 <p><span style="font-size:18px"><strong>Constraints:</strong><br>
 1&nbsp;≤ N ≤ 100</span><br>
 <span style="font-size:18px">1 ≤ Arr[i], K ≤ 10</span><sup>6</sup></p>
-
-<p>&nbsp;</p>
-
-<p><span style="font-size:18px">&nbsp;</span></p>
- <p></p>
-            </div>
+</div>
