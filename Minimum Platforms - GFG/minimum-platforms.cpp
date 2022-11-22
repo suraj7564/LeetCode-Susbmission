@@ -15,17 +15,14 @@ class Solution{
     	sort(arr, arr + n);
     	sort(dep, dep + n);
     	
-    	int ans = 1;
-    	priority_queue<int, vector<int>, greater<int>> pq;
-    	pq.push(dep[0]);
+    	int ans = 1, j = 0;
     	for(int i=1;i<n;i++){
-    	    if(arr[i] <= pq.top()){
-    	        ans ++;
+    	    if(arr[i] <= dep[j]){
+    	        ans++;
     	    }
     	    else{
-    	        pq.pop();
+    	        j++;
     	    }
-    	    pq.push(dep[i]);
     	}
     	return ans;
     }
