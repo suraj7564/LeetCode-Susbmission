@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 /* Linked list Node */
 struct Node {
@@ -14,7 +15,62 @@ struct Node {
     }
 };
 
-void reorderList(struct Node* head);
+
+
+// } Driver Code Ends
+/* Following is the Linked list node structure */
+
+/*
+struct Node
+{
+    int data;
+    struct Node* next;
+
+    Node(int x){
+        data = x;
+        next = NULL;
+    }
+};
+*/
+
+class Solution{ 
+public:
+    Node *reverse(Node *b){
+        Node *pre = NULL, *cur = b, *nxt;
+        while(cur){
+            nxt = cur->next;
+            cur->next = pre;
+            pre = cur;
+            cur = nxt;
+        }
+        return pre;
+    }
+    void reorderList(Node* head) {
+        // Your code here
+        if(!head) return;
+        Node* slow = head, *fast = head->next;
+        while(fast && fast->next){
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+        Node* a = head, *b = slow->next;
+        //cout<<a->data<<" "<<b->data<<endl;
+        slow->next = NULL;
+        b = reverse(b);
+        Node *ans = a;
+        while(a && b){
+            Node *nxt = a->next;
+            a->next = b;
+            a = b;
+            b = nxt; 
+        }
+        head = ans;
+    }
+};
+
+//{ Driver Code Starts.
+
+
 
 /* Function to create a new Node with given data */
 struct Node* newNode(int data) {
@@ -57,8 +113,10 @@ int main(void) {
             temp->next = new Node(x);
             temp = temp->next;
         }
-
-        reorderList(head);
+        
+        Solution ob;
+        
+        ob.reorderList(head);
         printList(head);
         freeList(head);
     }
@@ -66,42 +124,3 @@ int main(void) {
 }
 
 // } Driver Code Ends
-
-
-/* Following is the Linked list node structure */
-
-/*
-struct Node
-{
-    int data;
-    struct Node* next;
-
-    Node(int x){
-        data = x;
-        next = NULL;
-    }
-};
-*/
-#include<bits/stdc++.h>
-void reorderList(Node* head) {
-    // Your code here
-    vector<Node*> cur;
-    while(head){
-        cur.push_back(head);
-        head = head->next;
-    }
-    Node *ans = new Node(0);
-    Node *res = ans;
-    int i = 0, j = cur.size()-1;
-    while(i<=j){
-        ans->next = cur[i];
-        ans = ans->next;
-        if(i != j){
-            ans->next = cur[j];
-            ans = ans->next;
-        }
-        i++, j--;
-    }
-    ans->next = NULL;
-    head = res->next;
-}
