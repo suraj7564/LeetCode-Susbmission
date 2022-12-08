@@ -28,13 +28,21 @@ public:
     int findLastOccurence(string A,string B){
         //Code Here
         int idx = -1;
-        vector<int> z = lcp(B + "#" + A);
-        // for(int i=0;i<z.size();i++){
-        //     cout<<z[i]<<" ";
-        // }
-        // cout<<endl;
-        for(int i=0;i<z.size();i++){
-            if(z[i] == B.size()) idx = i - 2*B.size() + 1;
+        vector<int> z = lcp(B);
+        int m = B.length();
+        int i = 0, j = 0;
+        while(j < A.length()){
+            if(A[j] == B[i]){
+                i++, j++;
+                if(i == m){
+                    idx = j - m + 1;
+                    i = z[i-1];
+                }
+            }
+            else{
+                if(i>0) i = z[i-1];
+                else j++;
+            }
         }
         return idx;
     }
