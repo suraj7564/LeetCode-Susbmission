@@ -1,7 +1,6 @@
 # Bottom View of Binary Tree
-## Medium 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given a binary tree, print the bottom view from left to right.<br>
+## Medium
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a binary tree, print the bottom view from left to right.<br>
 A node is included in bottom view if it can be seen when we look at the tree from bottom.</span></p>
 
 <p><span style="font-size:18px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20<br>
@@ -37,7 +36,7 @@ Explanation:</strong>
 First case represents a tree with 3 nodes
 and 2 edges where root is 1, left child of
 1 is 3 and right child of 1 is 2.
-<img alt="" src="https://contribute.geeksforgeeks.org/wp-content/uploads/BT-1.jpg" class="img-responsive">
+<img alt="" src="https://contribute.geeksforgeeks.org/wp-content/uploads/BT-1.jpg">
 Thus nodes of the binary tree will be
 printed as such 3 1 2.</span></pre>
 
@@ -64,5 +63,4 @@ This is a functional problem, you <strong>don't </strong>need to care about inpu
 
 <p><br>
 <span style="font-size:14px"><strong>Note:&nbsp;</strong>The <strong>Input/Output</strong> format and <strong>Example</strong> given are used for the system's internal purpose, and should be used by a user for <strong>Expected Output </strong>only. As it is a function problem, hence a user should not read any input from the stdin/console. The task is to complete the function specified, and not to write the full code.</span></p>
- <p></p>
-            </div>
+</div>
