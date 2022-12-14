@@ -1,4 +1,4 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
 #define MAX_HEIGHT 100000
@@ -95,7 +95,7 @@ Node* buildTree(string str)
 
 
 
- // } Driver Code Ends
+// } Driver Code Ends
 /* A binary tree Node
 struct Node
 {
@@ -105,63 +105,57 @@ struct Node
 
 class Solution {
 public:
-    void findLeft(Node* root,vector<int>& ans){
-        if(!root||(!root->left&&!root->right)) return;
+    void leftView(Node *cur, vector<int>& ans){
+        if(!cur || (!cur->left && !cur->right)) return;
         
-        ans.push_back(root->data);
-        
-        if(root->left){
-            findLeft(root->left,ans);
-        }
-        else{
-            findLeft(root->right,ans);
-        }
+        ans.push_back(cur->data);
+        if(cur->left)
+            leftView(cur->left, ans);
+        else
+            leftView(cur->right, ans);
     }
     
-    void findLeaves(Node* root,vector<int>& ans){
-        if(!root) return;
+    void leaf(Node *cur, vector<int>& ans){
+        if(!cur) return;
         
-        if(!root->left&&!root->right){
-            ans.push_back(root->data);
+        if(!cur->left && !cur->right){
+            ans.push_back(cur->data);
             return;
         }
         
-        findLeaves(root->left,ans);
-        findLeaves(root->right,ans);
+        leaf(cur->left, ans);
+        leaf(cur->right, ans);
     }
     
-    void findRight(Node* root,vector<int>& ans){
-        if(!root||(!root->left&&!root->right)) return;
+    void rightView(Node *cur, vector<int>& ans){
+        if(!cur || (!cur->left && !cur->right)) return;
         
-        if(root->right){
-            findRight(root->right,ans);
-        }
-        else{
-            findRight(root->left,ans);
-        }
+        if(cur->right)
+            rightView(cur->right, ans);
+        else
+            rightView(cur->left, ans);
         
-        ans.push_back(root->data);
+        ans.push_back(cur->data);
     }
-    vector<int> boundary(Node *root)
+    vector <int> boundary(Node *root)
     {
         //Your code here
         if(!root) return {};
         vector<int> ans;
         ans.push_back(root->data);
         
-        findLeft(root->left,ans);
+        leftView(root->left, ans);
         
-        findLeaves(root->left,ans);
-        findLeaves(root->right,ans);
+        leaf(root->left, ans);
+        leaf(root->right, ans);
         
-        findRight(root->right,ans);
+        rightView(root->right, ans);
         
         return ans;
     }
-    
 };
 
-// { Driver Code Starts.
+//{ Driver Code Starts.
 
 /* Driver program to test size function*/
 
@@ -181,4 +175,5 @@ int main() {
         cout << endl;
     }
     return 0;
-}  // } Driver Code Ends
+}
+// } Driver Code Ends
