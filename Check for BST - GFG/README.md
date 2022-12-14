@@ -1,7 +1,6 @@
 # Check for BST
-## Easy 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given the root of a&nbsp;binary tree. Check whether it is a BST or not.<br>
+## Easy
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given the root of a&nbsp;binary tree. Check whether it is a BST or not.<br>
 <strong>Note: </strong>We are considering that BSTs can not contain duplicate Nodes.</span><br>
 <span style="font-size:18px">A&nbsp;<strong>BST</strong>&nbsp;is defined as follows:</span></p>
 
@@ -64,5 +63,4 @@ You don't need to read input or print anything. Your task is to complete the fun
 
 <p><span style="font-size:18px"><strong>Constraints:</strong><br>
 0 &lt;= Number of edges &lt;= 100000</span></p>
- <p></p>
-            </div>
+</div>
