@@ -47,7 +47,7 @@ class Solution
        Node *leftLCA = lca(root->left,n1,n2);
        Node *rightLCA = lca(root->right,n1,n2);
        
-       if(leftLCA&&rightLCA) return root;
+       if(leftLCA && rightLCA) return root;
        
        if(leftLCA) return leftLCA;
        return rightLCA;
