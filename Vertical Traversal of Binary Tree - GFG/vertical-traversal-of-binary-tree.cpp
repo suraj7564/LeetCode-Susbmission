@@ -1,4 +1,4 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -96,52 +96,45 @@ void printInorder(Node* root)
 }
 
 
- // } Driver Code Ends
+// } Driver Code Ends
 class Solution
 {
     public:
     //Function to find the vertical order traversal of Binary Tree.
-    int l=100000,r1=0;
-    map<pair<int,int>,vector<int> > m;
-    void find(Node* root,int r,int c){
-        if(!root) return;
-        m[{r,c}].push_back(root->data);
-        l=min(l,c);
-        r1=max(r1,c);
-        //cout<<r<<" "<<c<<" "<<r1<<" "<<l<<endl;
-        find(root->left,r+1,c-1);
-        find(root->right,r+1,c+1);
-    }
     vector<int> verticalOrder(Node *root)
     {
-        l=100000,r1=0;
-        find(root,0,0);
-        //cout<<r1<<" "<<l<<endl;
-        vector<vector<int>> ans(r1-l+1);
-        for (auto x: m) {
-            sort(x.second.begin(), x.second.end());
-            ans[x.first.second - l].push_back(x.first.first); //push each rwo
-        }
+        //Your code here
+        if(!root) return {};
         
-        int col = l;
-        vector<int> res;
-        for (vector<int> &v: ans) {
-            sort(v.begin(), v.end()); //sort all rows
-            
-            //push sorted rows for each column in ans
-            for (int r: v) {
-                for (auto x: m[{r, col}])
-                    res.push_back(x);
+        queue<pair<Node*, int>> q;
+        
+        q.push({root, 0});
+        map<int, vector<int>> m;
+        while(!q.empty()){
+            int sz = q.size();
+            while(sz-->0){
+                auto node = q.front().first;
+                int l = q.front().second;
+                q.pop();
+                m[l].push_back(node->data);
+                
+                if(node->left) q.push({node->left, l-1});
+                if(node->right) q.push({node->right, l+1});
             }
-            ++col;
-        }        
-        return res;
+        }
+        vector<int> ans;
+        for(auto x:m){
+            for(auto y:x.second){
+                ans.push_back(y);
+            }
+        }
+        return ans;
     }
 };
 
 
 
-// { Driver Code Starts.
+//{ Driver Code Starts.
 int main() {
     int t;
     string  tc;
@@ -164,4 +157,5 @@ int main() {
 }
 
 
-  // } Driver Code Ends
+
+// } Driver Code Ends
