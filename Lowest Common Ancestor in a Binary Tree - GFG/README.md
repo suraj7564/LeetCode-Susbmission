@@ -1,7 +1,8 @@
 # Lowest Common Ancestor in a Binary Tree
-## Medium 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif">Given a Binary Tree with all <strong>unique</strong> values and two nodes value,&nbsp;<strong>n1</strong> and <strong>n2</strong>. The task is to find the<strong>&nbsp;lowest common ancestor</strong> of the given two nodes. We may assume that either both n1 and n2 are present in the tree or none of them are&nbsp;present. </span></span></p>
+## Medium
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif">Given a Binary Tree with all <strong>unique</strong> values and two nodes value,&nbsp;<strong>n1</strong> and <strong>n2</strong>. The task is to find the<strong>&nbsp;lowest common ancestor</strong> of the given two nodes. We may assume that either both n1 and n2 are present in the tree or none of them are&nbsp;present. </span></span></p>
+
+<p><span style="font-size:18px">LCA: It is the first common ancestor of both the nodes n1 and n2 from bottom of tree.</span></p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
@@ -36,5 +37,4 @@ You don't have to read, input, or print anything. Your task is to complete the f
 <p><span style="font-size:18px"><span style="font-family:arial,helvetica,sans-serif"><strong>Constraints:</strong><br>
 1 ≤ Number of nodes ≤ 10<sup>5</sup><br>
 1 ≤ Data of a node ≤ 10<sup>5</sup></span></span></p>
- <p></p>
-            </div>
+</div>
