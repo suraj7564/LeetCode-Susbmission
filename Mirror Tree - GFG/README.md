@@ -1,8 +1,7 @@
 # Mirror Tree
-## Easy 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given a Binary Tree, convert it into its mirror.<br>
-<img alt="MirrorTree1" class="aligncenter size-full wp-image-663 img-responsive" src="https://contribute.geeksforgeeks.org/wp-content/uploads/mirrortrees.jpg" style="height:338px; width:591px" title="MirrorTree1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+## Easy
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a Binary Tree, convert it into its mirror.<br>
+<img alt="MirrorTree1" class="aligncenter size-full wp-image-663" src="https://contribute.geeksforgeeks.org/wp-content/uploads/mirrortrees.jpg" style="height:338px; width:591px" title="MirrorTree1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
@@ -45,5 +44,4 @@ Just complete the <strong>function mirror()&nbsp;</strong>that takes <strong>nod
 <p><span style="font-size:18px"><strong>Constraints:</strong><br>
 1 ≤ Number of nodes ≤ 10<sup>5</sup><br>
 1 ≤ Data of a node ≤ 10<sup>5</sup></span></p>
- <p></p>
-            </div>
+</div>
