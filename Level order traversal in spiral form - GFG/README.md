@@ -1,10 +1,9 @@
 # Level order traversal in spiral form
-## Easy 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Complete the function to find spiral order traversal of a tree. For below tree, function should return 1, 2, 3, 4, 5, 6, 7.<br>
+## Easy
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Complete the function to find spiral order traversal of a tree. For below tree, function should return 1, 2, 3, 4, 5, 6, 7.<br>
 <br>
 <br>
-<strong>&nbsp;<img alt="" src="https://contribute.geeksforgeeks.org/wp-content/uploads/level.jpg" style="height:290px; width:539px" class="img-responsive"></strong></span><br>
+<strong>&nbsp;<img alt="" src="https://contribute.geeksforgeeks.org/wp-content/uploads/level.jpg" style="height:290px; width:539px"></strong></span><br>
 &nbsp;</p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
@@ -36,5 +35,4 @@ The task is to complete the function <strong>findSpiral</strong>()&nbsp;which ta
 <p><span style="font-size:18px"><strong>Constraints:</strong><br>
 0 &lt;= Number of nodes &lt;= 10<sup>5</sup><br>
 0 &lt;= Data of a node &lt;= 10<sup>5</sup></span></p>
- <p></p>
-            </div>
+</div>
