@@ -1,7 +1,6 @@
 # Construct Tree from Inorder & Preorder
-## Medium 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given 2 Arrays of Inorder and preorder traversal. Construct a tree and print the Postorder traversal.&nbsp;</span></p>
+## Medium
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given 2 Arrays of Inorder and preorder traversal. Construct a tree and print the Postorder traversal.&nbsp;</span></p>
 
 <p><strong><span style="font-size:18px">Example 1:</span></strong></p>
 
@@ -34,5 +33,4 @@ Your task is to complete the function <strong>buildTree()&nbsp;</strong>which ta
 
 <p><span style="font-size:18px"><strong>Constraints:</strong><br>
 1&lt;=Number of Nodes&lt;=1000</span></p>
- <p></p>
-            </div>
+</div>
