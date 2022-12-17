@@ -1,7 +1,6 @@
 # Minimum element in BST
 ## Easy
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given a <strong>Binary Search Tree</strong>. The task is to find the minimum element in this given BST. </span></p>
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a <strong>Binary Search Tree</strong>. The task is to find the minimum element in this given BST. </span></p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
@@ -28,12 +27,11 @@
 </span></pre>
 
 <p><span style="font-size:18px"><strong>Your Task:</strong><br>
-The task is to complete the function <strong>minValue()</strong> which takes root as the argument and returns the minimum element of BST.&nbsp;If the tree is empty, there is no minimum elemnt, so retutn&nbsp;<strong>-1</strong> in that case.</span></p>
+The task is to complete the function <strong>minValue()</strong> which takes root as the argument and returns the minimum element of BST.&nbsp;If the tree is empty, there is no minimum element, so return&nbsp;<strong>-1</strong> in that case.</span></p>
 
 <p><span style="font-size:18px"><strong>Expected Time Complexity:&nbsp;</strong>O(Height of the BST)<br>
-<strong>Expected Auxiliary Space:&nbsp;</strong>O(Height of the BST).</span></p>
+<strong>Expected Auxiliary Space:&nbsp;</strong>O(1).</span></p>
 
 <p><span style="font-size:18px"><strong>Constraints:</strong><br>
 0 &lt;= N &lt;= 10<sup>4</sup></span></p>
- <p></p>
-            </div>
+</div>
