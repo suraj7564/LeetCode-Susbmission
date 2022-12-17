@@ -50,8 +50,8 @@ class Solution{
         if(st==end) return root;
         
         int mid = mp[root->data];
-        root->left = find(pre,in,idx,st,mid-1);
-        root->right = find(pre,in,idx,mid+1,end);
+        root->left = find(pre, in, idx, st, mid-1);
+        root->right = find(pre, in, idx, mid+1, end);
         
         return root;
     }
@@ -61,7 +61,7 @@ class Solution{
         for(int i=0;i<n;i++) mp[in[i]] = i;
         int idx = 0;
         
-        return find(pre,in,idx,0,n-1);
+        return find(pre, in, idx, 0, n-1);
     }
 };
 
