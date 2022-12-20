@@ -1,7 +1,6 @@
 # Count Number of SubTrees having given Sum
-## Medium 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given a binary tree&nbsp;and an integer <strong>X</strong>. Your task is to complete the function <strong>countSubtreesWithSumX()</strong> that returns the count of the number of subtress having total node’s data sum equal to the&nbsp;value <strong>X</strong>.</span><br>
+## Medium
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a binary tree&nbsp;and an integer <strong>X</strong>. Your task is to complete the function <strong>countSubtreesWithSumX()</strong> that returns the count of the number of subtress having total node’s data sum equal to the&nbsp;value <strong>X</strong>.</span><br>
 <span style="font-size:18px"><strong>Example:</strong> For the tree given below: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
 
 <p><span style="font-size:18px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5<br>
@@ -56,5 +55,4 @@ You don't need to read input or print anything. Your&nbsp;task is to complete th
 &nbsp;</p>
 
 <p><span style="font-size:14px"><strong>Note</strong>:The <strong>Input/Ouput</strong> format and <strong>Example</strong> given are used for system's internal purpose, and should be used by a user for <strong>Expected Output</strong> only. As it is a function problem, hence a user should not read any input from stdin/console. The task is to complete the function specified, and not to write the full code.</span></p>
- <p></p>
-            </div>
+</div>
