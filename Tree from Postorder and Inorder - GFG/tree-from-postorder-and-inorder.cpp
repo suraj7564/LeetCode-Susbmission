@@ -70,8 +70,6 @@ map<int,int> mp;
         
         Node* root = new Node(post[idx--]);
         
-        if(st==end) return root;
-        
         int mid = mp[root->data];
         root->right = find(post,in,idx,mid+1,end);
         root->left = find(post,in,idx,st,mid-1);
