@@ -1,7 +1,6 @@
 # Tree from Postorder and Inorder
-## Medium 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given <strong>inorder </strong>and <strong>postorder</strong> traversals of a Binary Tree in the arrays <strong>in[]</strong> and <strong>post[]</strong> respectively. The task is to construct the binary tree from these traversals.</span></p>
+## Medium
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given <strong>inorder </strong>and <strong>postorder</strong> traversals of a Binary Tree in the arrays <strong>in[]</strong> and <strong>post[]</strong> respectively. The task is to construct the binary tree from these traversals.</span></p>
 
 <p>&nbsp;</p>
 
@@ -59,5 +58,4 @@ You do not need to read input or print anything.&nbsp;Complete the function <str
 1 &lt;= in[i], post[i] &lt;= 10<sup>3</sup></span></p>
 
 <p>&nbsp;</p>
- <p></p>
-            </div>
+</div>
