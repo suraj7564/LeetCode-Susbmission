@@ -1,5 +1,4 @@
 //{ Driver Code Starts
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -44,51 +43,64 @@ struct Node
 
 /*Your method shouldn't print anything
  it should transform the passed linked list */
-class Solution
-{
+class Solution{
+    
 public:
-    Node *merge(Node* a, Node *b){
-        Node* result = NULL;
- 
-        /* Base cases */
-        if (a == NULL)
-            return (b);
-        else if (b == NULL)
-            return (a);
-     
-        /* Pick either a or b, and recur */
-        if (a->data <= b->data) {
-            result = a;
-            result->next = merge(a->next, b);
+    Node *reverse(Node *head){
+        if(!head || !head->next) return head;
+        
+        Node *cur = head, *pre = NULL, *nxt;
+        while(cur){
+            nxt = cur->next;
+            cur -> next = pre;
+            pre = cur;
+            cur = nxt;
         }
-        else {
-            result = b;
-            result->next = merge(a, b->next);
-        }
-        return (result);
+        return pre;
     }
-    void split(Node *head,Node **a, Node **b){
-        Node* slow = head, *fast = head->next;
-        while(fast){
-            fast = fast->next;
-            if(fast){
-                slow = slow->next;
-                fast = fast->next;
-            }
-        }
-        *a = head;
-        *b = slow->next;
-        //cout<<head->data<<" "<<slow->next->data<<endl;
-        slow->next = NULL;
-    }
-    void sortList(Node** head)
+    Node* sortList(Node* head)
     {
-        Node *cur = *head, *a, *b;
-        if(cur == NULL || cur->next == NULL) return;
-        split(cur, &a, &b);
-        sortList(&a);
-        sortList(&b);
-        *head = merge(a, b);
+        Node *pos = NULL, *neg = NULL;
+        Node *t1 = NULL, *t2 = NULL;
+        while(head){
+            if(head -> data >= 0){
+                if(t1 == NULL){
+                    //cout<<1<<" "<<head->data<<endl;
+                    pos = head;
+                    t1 = pos;
+                }
+                else{
+                    //cout<<2<<" "<<head->data<<endl;
+                    t1->next = head;
+                    t1 = t1 -> next;
+                }
+            }
+            else{
+                if(t2 == NULL){
+                    //cout<<3<<" "<<head->data<<endl;
+                    neg = head;
+                    t2 = neg;
+                }
+                else{
+                    //cout<<4<<" "<<head->data<<endl;
+                    t2->next = head;
+                    t2 = t2 -> next;
+                }
+            }
+            head = head -> next;
+        }
+        if(t1) t1->next = NULL;
+        if(t2) t2->next = NULL;
+        
+        neg = reverse(neg);
+        
+        Node *temp = neg;
+        while(temp && temp->next) temp = temp -> next;
+        
+        if(!temp) return pos;
+        
+        temp -> next = pos;
+        return neg;
     }
 };
 
@@ -119,7 +131,7 @@ int main()
 		// printList(head);
 		
 		Solution ob;
-		ob.sortList(&head);
+		head=ob.sortList(head);
 
 		printList(head);
 
