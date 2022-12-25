@@ -1,7 +1,6 @@
 # Root to Leaf Paths
-## Easy 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given a Binary Tree of size N, you need to find&nbsp;all the possible paths&nbsp;from root node to all the leaf&nbsp;node's of the binary tree.</span></p>
+## Easy
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a Binary Tree of size N, you need to find&nbsp;all the possible paths&nbsp;from root node to all the leaf&nbsp;node's of the binary tree.</span></p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
@@ -45,5 +44,4 @@ Your task is to complete the function&nbsp;<strong>Paths()</strong>&nbsp;that ta
 1&lt;=N&lt;=10<sup>3</sup></span></p>
 
 <p><strong>Note:&nbsp;</strong>The <strong>Input/Ouput</strong> format and <strong>Example</strong> given, are used for the system's internal purpose, and should be used by a user for <strong>Expected Output</strong> only. As it is a function problem, hence a user should not read any input from the stdin/console. The task is to complete the function specified, and not to write the full code.</p>
- <p></p>
-            </div>
+</div>
