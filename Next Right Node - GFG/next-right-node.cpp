@@ -1,4 +1,4 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 //Initial Template for C++
 
 #include <bits/stdc++.h>
@@ -95,8 +95,7 @@ Node *buildTree(string str)
     return root;
 }
 
- // } Driver Code Ends
-
+// } Driver Code Ends
 /*
 struct Node
 {
@@ -136,7 +135,7 @@ public:
     }
 };
 
-// { Driver Code Starts.
+//{ Driver Code Starts.
 int main()
 {
 
@@ -157,4 +156,5 @@ int main()
         cout << "\n";
     }
     return 0;
-}  // } Driver Code Ends
+}
+// } Driver Code Ends
