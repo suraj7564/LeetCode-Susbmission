@@ -30,7 +30,7 @@ the tree is 4 5 2 3 1.
 
 <strong>Output: </strong>10 7 1 6 10 6 5 8&nbsp;
 <strong>Explanation:</strong>
-Inorder traversal (Left-&gt;Right-&gt;Root) 
+Postorder traversal (Left-&gt;Right-&gt;Root) 
 of the tree is 10 7 1 6 10 6 5 8&nbsp;.</span></pre>
 
 <div>&nbsp;</div>
