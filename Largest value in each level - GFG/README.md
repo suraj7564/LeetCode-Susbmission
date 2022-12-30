@@ -1,7 +1,6 @@
 # Largest value in each level
-## Easy 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given a binary tree, find the largest value in each level.</span></p>
+## Easy
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a binary tree, find the largest value in each level.</span></p>
 
 <p><strong><span style="font-size:18px">Example 1:</span></strong></p>
 
@@ -47,5 +46,4 @@
 <div><strong><span style="font-size:18px">Constraints :&nbsp;</span></strong></div>
 
 <div><span style="font-size:18px">1 ≤&nbsp;Number of nodes ≤&nbsp;10^5</span></div>
- <p></p>
-            </div>
+</div>
