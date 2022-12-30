@@ -1,4 +1,4 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 //Initial Template for C++
 
 
@@ -89,7 +89,7 @@ Node* buildTree(string str)
 }
 
 
- // } Driver Code Ends
+// } Driver Code Ends
 //User function Template for C++
 
 class Solution
@@ -98,16 +98,16 @@ class Solution
     vector<int> largestValues(Node* root)
     {
         //code here
-        vector<int> ans;
         queue<Node*> q;
-        if(root) q.push(root);
+        q.push(root);
+        vector<int> ans;
         while(!q.empty()){
-            int n=q.size();
-            int mx=0;
-            while(n-->0){
-                Node* t=q.front();
+            int sz = q.size();
+            int mx = 0;
+            while(sz-->0){
+                auto t = q.front();
                 q.pop();
-                mx=max(mx,t->data);
+                mx = max(mx, t->data);
                 if(t->left) q.push(t->left);
                 if(t->right) q.push(t->right);
             }
@@ -117,7 +117,7 @@ class Solution
     }
 };
 
-// { Driver Code Starts.
+//{ Driver Code Starts.
 int main()
 {
 
@@ -140,4 +140,5 @@ int main()
         cout << "\n";
     }
     return 0;
-}  // } Driver Code Ends
+}
+// } Driver Code Ends
