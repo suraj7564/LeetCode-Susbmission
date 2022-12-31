@@ -1,7 +1,6 @@
 # Print Binary Tree levels in sorted order
-## Medium 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given an array <strong>arr</strong>[] which contains data of <strong>N</strong> nodes of Complete Binary tree in level order fashion. The task is to print the level order traversal in sorted order. </span></p>
+## Medium
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given an array <strong>arr</strong>[] which contains data of <strong>N</strong> nodes of Complete Binary tree in level order fashion. The task is to print the level order traversal in sorted order. </span></p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
@@ -48,5 +47,4 @@ You don't need to read input or print anything. Your task is to complete the fun
 1 &lt;= N&nbsp;&lt;= 10<sup>4</sup></span></p>
 
 <p>&nbsp;</p>
- <p></p>
-            </div>
+</div>
