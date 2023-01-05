@@ -10,15 +10,14 @@ public:
 	int maxSubstring(string S)
 	{
 	    // Your code goes here
-	    int mx = -1;
-	    int cur = 0;
+	    int ans = -2, cur = 0;
 	    for(auto x:S){
-	        if(x=='1') cur-=1;
-	        else cur+=1;
-	        mx = max(mx,cur);
-	        cur = max(cur,0);
+	        if(x == '0') cur += 1;
+	        else cur -= 1;
+	        ans = max(ans, cur);
+	        cur = max(0, cur);
 	    }
-	    return mx;
+	    return ans;
 	}
 };
 
