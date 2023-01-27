@@ -5,7 +5,7 @@ using namespace std;
 // } Driver Code Ends
 class Solution {
 	public:
-	    int n, mod = 1e9 + 7;
+		int n, mod = 1e9 + 7;
 	    long long solve(int i, string& s, vector<long long>& dp){
 	        if(i >= n) return 1;
 	        
@@ -28,7 +28,6 @@ class Solution {
 		    long long ans = solve(0, str, dp);
 		    return (int)ans;
 		}
-
 };
 
 //{ Driver Code Starts.
