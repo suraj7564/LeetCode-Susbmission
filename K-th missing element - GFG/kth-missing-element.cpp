@@ -31,6 +31,7 @@ int main()
 int KthMissingElement(int a[], int n, int k)
 {
     // Complete the function
+    // 12 ...................  38 K = 5
     //1, 3, 4, 6, 7 k = 2
     // curAns = 0, i = 0, cnt = 0;
     // step - 1 -> curAns = 1 , i = 1, cnt = 0
@@ -39,15 +40,16 @@ int KthMissingElement(int a[], int n, int k)
     // step - 4 -> curAns = 4 , i = 3, cnt = 1;
     // step - 5 -> curAns = 5 , i = 3, cnt = 2 = k return curAns
     sort(a, a + n);
-    int cnt = 0, curAns = a[0] - 1, i = 0;
+    int cnt = 0, curAns = a[0], i = 0;
     while(i < n && cnt < k){
-        curAns++;
         if(curAns == a[i]){
             i++;
+            curAns++;
             continue;
         }
         cnt++;
         if(cnt == k) return curAns;
+        curAns++;
     }
     return -1;
 }
