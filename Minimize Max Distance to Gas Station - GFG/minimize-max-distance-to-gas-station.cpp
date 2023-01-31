@@ -6,14 +6,19 @@ using namespace std;
 class Solution {
   public:
     // 10 5 
+    
+    // 10 5 -> 2 2 2 2 2 -> 10/5 -> 2 10/2
     bool check(vector<int>& a, int k, double curAns){
         int cnt = 0;
         for(int i=1;i<a.size();i++){
             double cur = a[i] - a[i - 1];
-            cnt += cur/curAns;
+            cnt += (cur - 0.0000000001)/curAns;
         }
         return cnt <= k;
     }
+    //1 2 3 4
+    //l = 0 r = 2 k = 3
+    // m = 1, ans = 1
     double findSmallestMaxDist(vector<int> &a, int k){
       // Code her
         sort(a.begin(), a.end());
