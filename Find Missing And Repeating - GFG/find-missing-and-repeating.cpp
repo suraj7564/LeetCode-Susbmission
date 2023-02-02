@@ -1,31 +1,40 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 #include <bits/stdc++.h>
 
 using namespace std;
 
- // } Driver Code Ends
+// } Driver Code Ends
 class Solution{
 public:
     int *findTwoElement(int *arr, int n) {
-        vector<int> v(n+1,0);
-        for(int i=0;i<n;i++){
-            v[arr[i]]++;
+        // code here
+        // sum = n * (n + 1)/2
+        // sqSum = n * (n + 1) * (2n * 1)/6
+        long long sum = 0, sqSum = 0;
+        for(long long i=1;i<=n;i++){
+            long long cur = arr[i - 1];
+            sum += i - cur;
+            sqSum += i * i - cur * cur;
         }
-        int a[2];
-        for(int i=0;i<n;i++){
-            if(v[i+1]==2){
-                a[0]=i+1;
-            }
-            if(v[i+1]==0){
-                a[1]=i+1;
-            }
+        
+        long long sumb = sqSum/sum;
+        
+        long long a = (sum + sumb)/2;
+        long long b = (sumb - sum)/2;
+        if(sum > 0){
+            if(a > b) swap(a, b);
         }
-        int *p=a;
-        return p;
+        else{
+            if(a < b) swap(a, b);
+        }
+        int ans[2];
+        ans[0] = a, ans[1] = b;
+        int *res = ans;
+        return res;
     }
 };
 
-// { Driver Code Starts.
+//{ Driver Code Starts.
 
 int main() {
     int t;
@@ -42,4 +51,5 @@ int main() {
         cout << ans[0] << " " << ans[1] << "\n";
     }
     return 0;
-}  // } Driver Code Ends
+}
+// } Driver Code Ends
