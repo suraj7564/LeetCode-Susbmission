@@ -11,8 +11,14 @@ class Solution{
     // x: element whose floor is to find
     int findFloor(vector<long long> v, long long n, long long x){
         // Your code here
-        int idx = upper_bound(v.begin(), v.end(), x) - v.begin();
-        return idx - 1;
+        if(v[n - 1] <= x) return n - 1;
+        int l = 0, r = n - 1;
+        while(l < r){
+            int m = (l + r)/2;
+            if(v[m] > x) r = m;
+            else l = m + 1;
+        }
+        return l - 1;
     }
 };
 
