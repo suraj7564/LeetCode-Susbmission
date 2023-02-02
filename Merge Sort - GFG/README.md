@@ -1,7 +1,6 @@
 # Merge Sort
-## Medium 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given an array arr[], its starting position l and its ending position r. Sort the array using merge sort algorithm.</span><br>
+## Medium
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given an array arr[], its starting position l and its ending position r. Sort the array using merge sort algorithm.</span><br>
 <span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
 <pre><span style="font-size:18px"><strong>Input:</strong>
@@ -31,5 +30,4 @@ You don't need to take the input or print anything. Your task is to complete the
 <span style="font-size:18px"><strong>Constraints:</strong><br>
 1 &lt;= N &lt;= 10<sup>5</sup><br>
 1 &lt;= arr[i] &lt;= 10<sup>3</sup></span></p>
- <p></p>
-            </div>
+</div>
