@@ -1,7 +1,6 @@
 # Next Permutation
-## Medium 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Implement the next permutation, which rearranges the list of numbers into Lexicographically next greater permutation of list of&nbsp;numbers. If such arrangement is not possible, it must be rearranged to the lowest possible order <em>i.e.</em>&nbsp;sorted in an ascending order. You are given an list of numbers <strong>arr[ ]</strong> of size <strong>N</strong>.</span></p>
+## Medium
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Implement the next permutation, which rearranges the list of numbers into Lexicographically next greater permutation of list of&nbsp;numbers. If such arrangement is not possible, it must be rearranged to the lowest possible order <em>i.e.</em>&nbsp;sorted in an ascending order. You are given an list of numbers <strong>arr[ ]</strong> of size <strong>N</strong>.</span></p>
 
 <p><strong><span style="font-size:18px">Example 1:</span></strong></p>
 
@@ -28,5 +27,4 @@ You do not need to read input or print anything. Your task is to complete the fu
 
 <p><span style="font-size:18px"><strong>Constraints:</strong><br>
 1 ≤ N ≤ 10000</span></p>
- <p></p>
-            </div>
+</div>
