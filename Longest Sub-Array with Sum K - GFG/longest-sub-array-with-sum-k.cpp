@@ -1,10 +1,9 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
 
 
- // } Driver Code Ends
-
+// } Driver Code Ends
 class Solution{
     public:
     int lenOfLongSubarr(int a[],  int n, int k) 
@@ -26,7 +25,7 @@ class Solution{
 
 };
 
-// { Driver Code Starts.
+//{ Driver Code Starts.
 
 int main() {
 	//code
@@ -46,4 +45,5 @@ int main() {
 	}
 	
 	return 0;
-}  // } Driver Code Ends
+}
+// } Driver Code Ends
