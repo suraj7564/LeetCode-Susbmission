@@ -1,7 +1,6 @@
 # Longest consecutive subsequence
-## Medium 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given an array of positive integers. Find the length of the longest sub-sequence such that elements in the subsequence are consecutive integers, the<strong> consecutive numbers can be in any order.</strong></span><br>
+## Medium
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given an array of positive integers. Find the length of the longest sub-sequence such that elements in the subsequence are consecutive integers, the<strong> consecutive numbers can be in any order.</strong></span><br>
 &nbsp;</p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
@@ -41,5 +40,4 @@ You don't need to read input or print anything. Your task is to complete the fun
 <span style="font-size:18px"><strong>Constraints:</strong></span><br>
 <span style="font-size:18px">1 &lt;= N &lt;= 10<sup>5</sup><br>
 0 &lt;= a[i] &lt;= 10<sup>5</sup></span></p>
- <p></p>
-            </div>
+</div>
