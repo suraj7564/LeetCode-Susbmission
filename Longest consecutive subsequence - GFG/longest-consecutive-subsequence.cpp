@@ -1,9 +1,9 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
 
 
- // } Driver Code Ends
+// } Driver Code Ends
 class Solution{
   public:
     // arr[] : the input array
@@ -12,23 +12,22 @@ class Solution{
     //Function to return length of longest subsequence of consecutive integers.
     int findLongestConseqSubseq(int arr[], int N)
     {
-        vector<int> cnt(100005,0);
+      //Your code here
+        vector<int> cnt(1e5 + 5, 0);
         for(int i=0;i<N;i++){
-            cnt[arr[i]]=1;
+            cnt[arr[i]] = 1;
         }
-        int ans=0,cur=0;
-        for(int i=0;i<=100000;i++){
-            if(cnt[i]){
-                cur++;
-            }
-            else cur=0;
-            ans=max(cur,ans);
+        int cur = 0, ans = 0;
+        for(int i=0;i<=1e5;i++){
+            if(cnt[i]) cur++;
+            else cur = 0;
+            ans = max(ans, cur);
         }
         return ans;
     }
 };
 
-// { Driver Code Starts.
+//{ Driver Code Starts.
  
 // Driver program
 int main()
@@ -45,4 +44,5 @@ int main()
  }
       
     return 0;
-}  // } Driver Code Ends
+}
+// } Driver Code Ends
