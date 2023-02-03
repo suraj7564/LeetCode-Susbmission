@@ -1,7 +1,6 @@
 # Delete Middle of Linked List
-## Easy 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given a singly linked list, delete <strong>middle&nbsp;</strong>of the linked list. For example, if given linked list is 1-&gt;2-&gt;<strong>3</strong>-&gt;4-&gt;5 then linked list should be modified to 1-&gt;2-&gt;4-&gt;5.<br>
+## Easy
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a singly linked list, delete <strong>middle&nbsp;</strong>of the linked list. For example, if given linked list is 1-&gt;2-&gt;<strong>3</strong>-&gt;4-&gt;5 then linked list should be modified to 1-&gt;2-&gt;4-&gt;5.<br>
 If there are <strong>even</strong> nodes, then there would be <strong>two middle </strong>nodes, we need to delete the second middle element. For example, if given linked list is 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;6 then it should be modified to 1-&gt;2-&gt;3-&gt;5-&gt;6.</span><br>
 <span style="font-size:18px">If the input linked list is NULL or has 1 node, then it should return NULL</span></p>
 
@@ -27,5 +26,4 @@ The task is to complete the function <strong>deleteMid</strong>() which should d
 <p><span style="font-size:18px"><strong>Constraints:</strong><br>
 1 &lt;= N &lt;= 1000<br>
 1 &lt;= value &lt;= 1000</span></p>
- <p></p>
-            </div>
+</div>
