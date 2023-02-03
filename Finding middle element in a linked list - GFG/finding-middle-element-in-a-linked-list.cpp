@@ -1,4 +1,4 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 //Initial template for C++
 
 #include <bits/stdc++.h>
@@ -24,7 +24,7 @@ void printList(Node* node)
 } 
 
 
- // } Driver Code Ends
+// } Driver Code Ends
 /* Link list Node 
 struct Node {
     int data;
@@ -42,18 +42,17 @@ class Solution{
     int getMiddle(Node *head)
     {
         // Your code here
-        Node* slow = head;
-        Node* fast = head;
-        while(fast&&fast->next){
+        Node *slow = head, *fast = head;
+        while(fast && fast -> next){
             slow = slow->next;
-            fast = fast->next->next;
+            fast = fast -> next -> next;
         }
         return slow->data;
     }
 };
 
 
-// { Driver Code Starts.
+//{ Driver Code Starts.
 
 int main() {
     //code
@@ -78,4 +77,5 @@ int main() {
     }
     return 0;
 }
-  // } Driver Code Ends
+
+// } Driver Code Ends
