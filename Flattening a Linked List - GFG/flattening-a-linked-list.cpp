@@ -125,19 +125,11 @@ Node* merge(Node* a,Node* b){
 		temp->bottom = t;
 		temp = temp->bottom;
 	}
-    while(a!=NULL){
-        int x = a->data;
-	    a = a->bottom;
-	    Node* t = new Node(x);
-		temp->bottom = t;
-		temp = temp->bottom;
+    if(a!=NULL){
+        temp->bottom = a;
     }
-    while(b!=NULL){
-        int x = b->data;
-	    b = b->bottom;
-	    Node* t = new Node(x);
-		temp->bottom = t;
-		temp = temp->bottom;
+    if(b!=NULL){
+        temp->bottom = b; 
     }
 	return dummy->bottom;
 }
@@ -151,8 +143,10 @@ Node *flatten(Node *head)
 	Node *ans = new Node(0);
 	Node *temp = head;
 	while(temp){
+	    Node *p = temp->next;
+	    temp->next = NULL;
 		ans = merge(ans,temp);
-		temp = temp->next;
+		temp = p;
 	}
 	return ans->bottom;
 }
