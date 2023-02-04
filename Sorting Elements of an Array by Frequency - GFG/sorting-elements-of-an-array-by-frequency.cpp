@@ -8,25 +8,30 @@ using namespace std;
 int main()
  {
  	speed;
+	//code
 	int t;
 	cin>>t;
 	while(t-->0){
-	    int n;
+	    int n, x;
 	    cin>>n;
-	    vector<int> a(n);
-	    unordered_map<int,int> m;
+	    map<int, int> m;
 	    for(int i=0;i<n;i++){
-	        cin>>a[i];
-	        m[a[i]]++;
+	        cin>>x;
+	        m[x]++;
 	    }
-	    sort(a.begin(),a.end(),[&](int a,int b){
-	        if(m[a]==m[b]){
-	            return a<b;
+	    vector<pair<int, int>> a;
+	    for(auto x:m){
+	        a.push_back({x.first, x.second});
+	    }
+	    sort(a.begin(), a.end(), [&](pair<int, int>& p, pair<int, int>& q){
+	        if(p.second == q.second){
+	            return p.first < q.first;
 	        }
-	        return m[a]>m[b];
+	        return p.second > q.second;
 	    });
-	    for(auto x:a){
-	        cout<<x<<" ";
+	    for(int i=0;i<a.size();i++){
+	        for(int j=0;j<a[i].second;j++)
+	            cout<<a[i].first<<" ";
 	    }
 	    cout<<endl;
 	}
