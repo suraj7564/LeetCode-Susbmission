@@ -8,22 +8,17 @@ class Solution{
     public:
     //You need to complete this fucntion
     
-    long long power(int N,int R)
+    long long power(int a,int b)
     {
        //Your code here
        //long long mod = 1e9+7;
-       long long a = N ,b = R;
-       long long res = 1;
-       while(b){
-           if(b&1){
-               res = (res*a)%mod;
-               b--;
-           }
-           a = (a*a)%mod;
-           b = b>>1;
-       }
-       return res;
-        
+       if (b == 0)
+        return 1;
+        long long res = power(a, b / 2)%mod;
+        if (b % 2)
+            return ((res%mod * res%mod)%mod * a%mod)%mod;
+        else
+            return (res%mod * res%mod)%mod;
     }
 
 };
