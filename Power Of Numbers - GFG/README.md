@@ -1,7 +1,6 @@
 # Power Of Numbers
-## Easy 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given a number and its reverse. Find that number raised to the power of its own reverse.<br>
+## Easy
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a number and its reverse. Find that number raised to the power of its own reverse.<br>
 <strong>Note:</strong> As answers can be very large, print the result modulo <strong>10<sup>9</sup> + 7</strong>.</span></p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
@@ -33,5 +32,4 @@ gives remainder as 864354781.</span></pre>
 1 &lt;= N &lt;= 10<sup>9</sup></span></p>
 
 <p>&nbsp;</p>
- <p></p>
-            </div>
+</div>
