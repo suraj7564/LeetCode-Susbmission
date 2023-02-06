@@ -20,7 +20,7 @@ class Solution{
         int ans = 0;
         for(auto x:str){
             if(x >= '0' && x <= '9'){
-                ans = ans * 10 + (x - '0');
+                ans = ans * 10 + (x - 48);
             }
             else return -1;
         }
