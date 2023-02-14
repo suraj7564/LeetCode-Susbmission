@@ -9,32 +9,24 @@ using namespace std;
 
 class Solution{
 public:
-    int maximumPath(int n, vector<vector<int>> Matrix)
+    int maximumPath(int n, vector<vector<int>> a)
     {
         // code here
-        for(int i=1;i<n;i++){
-            for(int j=0;j<n;j++){
-                if(j>0&&j<n-1){
-                    Matrix[i][j] += max({Matrix[i-1][j-1],Matrix[i-1][j],Matrix[i-1][j+1]});
-                }
-                if(j==n-1){
-                    Matrix[i][j] += max(Matrix[i-1][j],Matrix[i-1][j-1]);
-                }
-                if(j==0){
-                    Matrix[i][j] += max(Matrix[i-1][j],Matrix[i-1][j+1]);
-                }
-                // else{
-                //     Matrix[i][j] += Matrix[i-1][j];
-                // }
-                //cout<<Matrix[i][j]<<" ";
-            }
-            //cout<<endl;
-        }
-        int mx = 0;
+        int ans = 0;
         for(int i=0;i<n;i++){
-            mx = max(Matrix[n-1][i],mx);
+            for(int j=0;j<n;j++){
+                if(i > 0){
+                    int x = a[i - 1][j];
+                    if(j > 0) x = max(a[i - 1][j - 1], x);
+                    if(j < n - 1) x = max(x, a[i - 1][j + 1]);
+                    a[i][j] += x;
+                }
+                if(i == n - 1){
+                    ans = max(ans, a[i][j]);
+                }
+            }
         }
-        return mx;
+        return ans;
     }
 };
 
