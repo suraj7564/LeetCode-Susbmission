@@ -1,7 +1,6 @@
 # Longest Palindromic Subsequence
-## Medium 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given a String, find the longest palindromic subsequence.</span></p>
+## Medium
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a String, find the longest palindromic subsequence.</span></p>
 
 <p><br>
 <span style="font-size:18px"><strong>Example 1:</strong></span></p>
@@ -33,5 +32,4 @@ You don't need to read input or print anything. Your task is to complete the fun
 <p><br>
 <span style="font-size:18px"><strong>Constraints:</strong><br>
 1 ≤ |S| ≤ 1000</span></p>
- <p></p>
-            </div>
+</div>
