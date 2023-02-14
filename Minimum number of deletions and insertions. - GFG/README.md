@@ -1,7 +1,6 @@
 # Minimum number of deletions and insertions.
-## Easy 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given two strings <strong>str1</strong> and <strong>str2</strong>. The task is to remove or insert the minimum number of characters from/in <strong>str1</strong> so as to transform it into <strong>str2</strong>. It could be possible that the same character needs to be removed/deleted from one point of str1 and inserted to some another point.</span></p>
+## Easy
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given two strings <strong>str1</strong> and <strong>str2</strong>. The task is to remove or insert the minimum number of characters from/in <strong>str1</strong> so as to transform it into <strong>str2</strong>. It could be possible that the same character needs to be removed/deleted from one point of str1 and inserted to some another point.</span></p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
@@ -36,5 +35,4 @@ You don't need to read or&nbsp;print anything. Your task is to complete the func
 <p><span style="font-size:18px"><strong>Constraints:</strong><br>
 1 ≤ |str1|, |str2| ≤ 1000</span><br>
 <span style="font-size:18px">All the characters are lower case English alphabets</span></p>
- <p></p>
-            </div>
+</div>
