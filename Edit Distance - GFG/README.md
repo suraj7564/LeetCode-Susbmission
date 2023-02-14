@@ -1,7 +1,6 @@
 # Edit Distance
-## Medium 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given two strings <strong>s</strong>&nbsp;and <strong>t. </strong>Return the minimum number of operations required to convert <strong>s&nbsp;</strong>to <strong>t</strong>.<br>
+## Medium
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given two strings <strong>s</strong>&nbsp;and <strong>t. </strong>Return the minimum number of operations required to convert <strong>s&nbsp;</strong>to <strong>t</strong>.<br>
 The possible operations are permitted:</span></p>
 
 <ol>
@@ -43,5 +42,4 @@ You don't need to read or&nbsp;print anything. Your task is to complete the func
 <span style="font-size:18px"><strong>Constraints:</strong><br>
 1 ≤ Length of both strings ≤ 100<br>
 Both&nbsp;the strings are in&nbsp;lowercase.</span></p>
- <p></p>
-            </div>
+</div>
