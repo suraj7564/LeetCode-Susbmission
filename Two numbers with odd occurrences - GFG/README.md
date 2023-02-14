@@ -14,7 +14,7 @@ Arr = {4, 2, 4, 5, 2, 3, 3, 1}
 <span style="font-size:18px"><strong>Example 2:</strong></span></p>
 
 <pre><span style="font-size:18px"><strong>Input:</strong>
-N = 6
+N = 8
 Arr = {1 7 5 7 5 4 7 4}
 <strong>Output:</strong> {7, 1}
 <strong>Explaination:</strong> 7 and 1 have odd occurrences.</span></pre>
