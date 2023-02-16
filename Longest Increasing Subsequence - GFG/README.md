@@ -1,7 +1,6 @@
 # Longest Increasing Subsequence
-## Medium 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given an array of integers, find the <strong>length </strong>of the<strong> longest (strictly) increasing subsequence</strong> from the&nbsp;given array.</span></p>
+## Medium
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given an array of integers, find the <strong>length </strong>of the<strong> longest (strictly) increasing subsequence</strong> from the&nbsp;given array.</span></p>
 
 <p><strong><span style="font-size:18px">Example 1:</span></strong></p>
 
@@ -32,5 +31,4 @@ Complete the function&nbsp;<strong>longestSubsequence()</strong>&nbsp;which take
 <p><span style="font-size:18px"><strong>Constraints:</strong></span><br>
 <span style="font-size:18px">1 ≤ N ≤ 10<sup>5</sup><br>
 0 ≤ A[i] ≤ 10<sup>6</sup></span></p>
- <p></p>
-            </div>
+</div>
