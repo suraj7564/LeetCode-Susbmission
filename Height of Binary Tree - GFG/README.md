@@ -1,5 +1,5 @@
 # Height of Binary Tree
-## Medium
+## Easy
 <div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a binary tree, find its height.</span></p>
 
 <p><br>
