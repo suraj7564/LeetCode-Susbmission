@@ -1,4 +1,4 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 //
 
 #include<bits/stdc++.h>
@@ -27,8 +27,7 @@ void printPostOrder(Node *root)
 	cout<<root->data<<" ";
 }
 
- // } Driver Code Ends
-
+// } Driver Code Ends
 
 /*Complete the code here.
 Node is as follows:
@@ -45,11 +44,18 @@ class Solution{
     Node* find(int pre[],int in[],int &idx,int st,int end){
         if(st>end) return NULL;
         
-        Node* root = new Node(pre[idx++]);
+        int cur = pre[idx++];
+        Node* root = new Node(cur);
         
         if(st==end) return root;
         
-        int mid = mp[root->data];
+        int mid = -1;
+        for(int i=st;i<=end;i++){
+            if(in[i] == cur){
+                mid = i;
+                break;
+            }
+        }
         root->left = find(pre, in, idx, st, mid-1);
         root->right = find(pre, in, idx, mid+1, end);
         
@@ -65,7 +71,7 @@ class Solution{
     }
 };
 
-// { Driver Code Starts.
+//{ Driver Code Starts.
 int main()
 {
 	int t;
@@ -86,4 +92,5 @@ int main()
 		cout<< endl;
 	}
 }
-  // } Driver Code Ends
+
+// } Driver Code Ends
