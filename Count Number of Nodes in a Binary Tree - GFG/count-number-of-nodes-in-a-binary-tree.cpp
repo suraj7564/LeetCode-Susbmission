@@ -27,9 +27,24 @@ struct Node {
 
 class Solution {
   public:
+    int leftH(Node* root){
+        if(!root) return 0;
+        
+        return 1 + leftH(root->left);
+    }
+    int rightH(Node* root){
+        if(!root) return 0;
+        
+        return 1 + rightH(root->right);
+    }
     int countNodes(Node* root) {
         // Write your code here
         if(!root) return 0;
+        
+        int lh = leftH(root);
+        int rh = rightH(root);
+        
+        if(lh == rh) return (1<<lh) - 1;
         
         int l = countNodes(root->left);
         int r = countNodes(root->right);
