@@ -22,7 +22,9 @@ A node is included in bottom view if it can be seen when we look at the tree fro
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; /&nbsp; &nbsp; \&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10 &nbsp;&nbsp; &nbsp;&nbsp; 14</span></p>
 
-<p><span style="font-size:18px">For the above tree the output should be 5 10 4 14 25.</span><br>
+<p><span style="font-size:18px">For the above tree the output should be 5 10 4 14 25.<br>
+<br>
+<strong>Note:&nbsp;</strong>The <strong>Input/Output</strong> format and <strong>Example</strong> given are used for the system's internal purpose, and should be used by a user for <strong>Expected Output </strong>only. As it is a function problem, hence a user should not read any input from the stdin/console. The task is to complete the function specified, and not to write the full code.</span><br>
 &nbsp;</p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
@@ -54,13 +56,10 @@ printed as such 3 1 2.</span></pre>
 <p><span style="font-size:18px"><strong>Your Task:</strong><br>
 This is a functional problem, you <strong>don't </strong>need to care about input, just complete the function <strong>bottomView</strong>() which takes the root node of the tree as input and returns an array&nbsp;containing the bottom view of the given tree.</span></p>
 
-<p><span style="font-size:18px"><strong>Expected Time Complexity:&nbsp;</strong>O(N).<br>
+<p><span style="font-size:18px"><strong>Expected Time Complexity:&nbsp;</strong>O(N*logN).<br>
 <strong>Expected Auxiliary Space:&nbsp;</strong>O(N).</span></p>
 
 <p><span style="font-size:18px"><strong>Constraints:</strong><br>
 1 &lt;= Number of nodes &lt;= 10<sup>5</sup><br>
 1 &lt;= Data of a node &lt;= 10<sup>5</sup></span></p>
-
-<p><br>
-<span style="font-size:14px"><strong>Note:&nbsp;</strong>The <strong>Input/Output</strong> format and <strong>Example</strong> given are used for the system's internal purpose, and should be used by a user for <strong>Expected Output </strong>only. As it is a function problem, hence a user should not read any input from the stdin/console. The task is to complete the function specified, and not to write the full code.</span></p>
 </div>
