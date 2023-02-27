@@ -1,6 +1,6 @@
 # Construct Tree from Inorder & Preorder
 ## Medium
-<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given 2 Arrays of Inorder and preorder traversal. Construct a tree and print the Postorder traversal.&nbsp;</span></p>
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given 2 Arrays of Inorder and preorder traversal. The tree can contain duplicate elements. Construct a tree and print the Postorder traversal.&nbsp;</span></p>
 
 <p><strong><span style="font-size:18px">Example 1:</span></strong></p>
 
