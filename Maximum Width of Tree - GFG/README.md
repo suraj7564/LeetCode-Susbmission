@@ -46,7 +46,7 @@ Hence the answer is 2
 <span style="font-size:18px">You don't have to read any input. Complete the <strong>function getMaxWidth()&nbsp;</strong>that takes the&nbsp;<strong>node </strong>as a&nbsp;<strong>parameter </strong>and <strong>returns </strong>the<strong> maximum width</strong>. The driver code does the printing.</span></p>
 
 <p><span style="font-size:18px"><strong>Expected Time Complexity:&nbsp;</strong>O(N).<br>
-<strong>Expected Auxiliary Space:&nbsp;</strong>O(N).</span></p>
+<strong>Expected Auxiliary Space:&nbsp;</strong>O(Width of the tree).</span></p>
 
 <p><span style="font-size:18px"><strong>Constraints:</strong><br>
 1 &lt;= Number of Nodes&lt;= 10<sup>5</sup><br>
