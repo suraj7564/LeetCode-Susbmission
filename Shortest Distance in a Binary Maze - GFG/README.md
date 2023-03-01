@@ -57,6 +57,5 @@ shortest path from source to destination cell.</span>
 	<li><span style="font-size:18px">1 ≤ n, m ≤ 500</span></li>
 	<li><span style="font-size:18px">grid[i][j] == 0 or grid[i][j] == 1</span></li>
 	<li><span style="font-size:18px">The source and destination cells are always inside the given matrix.</span></li>
-	<li><span style="font-size:18px">The source and destination cells always contain 1.</span></li>
 </ul>
 </div>
