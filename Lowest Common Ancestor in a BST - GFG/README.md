@@ -8,8 +8,8 @@
 </strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5
  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;/&nbsp; &nbsp; \
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4&nbsp;&nbsp; &nbsp; &nbsp; 6
- &nbsp; &nbsp;   &nbsp;/&nbsp; &nbsp;&nbsp; &nbsp;  &nbsp;\
- &nbsp;    &nbsp;3&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;7
+ &nbsp; &nbsp;     &nbsp;\&nbsp; &nbsp;&nbsp; &nbsp; \
+ &nbsp;    &nbsp;    3&nbsp; &nbsp; &nbsp; &nbsp;7
  &nbsp;&nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  \
 &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp;&nbsp;8
 n1 = 7, n2 = 8
