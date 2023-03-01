@@ -113,7 +113,7 @@ struct Node
 
 class Solution {
   public:
-    Node* first = NULL, *mid = NULL, *last = NULL, *pre = NULL;
+    Node* first = NULL, *last = NULL, *pre = NULL;
     void get(Node* root){
         if(!root) return;
         
@@ -122,12 +122,8 @@ class Solution {
         if(pre && pre->data > root->data){
             if(first == NULL){
                 first = pre;
-                mid = root;
-                //cout<<root->data<<endl;
             }
-            else{
-                last = root;
-            }
+            last = root;
         }
         
         pre = root;
@@ -140,7 +136,6 @@ class Solution {
         get(root);
         
         if(first && last) swap(first->data, last->data);
-        else if(first && mid) swap(first->data, mid->data);
     }
 };
 
