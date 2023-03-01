@@ -1,6 +1,6 @@
 # Minimum element in BST
 ## Easy
-<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a <strong>Binary Search Tree</strong>. The task is to find the minimum element in this given BST. </span></p>
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a <strong>Binary Search Tree</strong>. The task is to find the minimum valued element in this given BST. </span></p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
