@@ -1,4 +1,4 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -51,6 +51,7 @@ int main() {
         cout << endl;
     }
 }
+
 // } Driver Code Ends
 
 
@@ -58,9 +59,15 @@ int main() {
 bool search(Node* root, int x) {
     // Your code here
     if(!root) return false;
+    if(root->data == x) return true;
     
-    if(root->data>x) return search(root->left,x);
-    if(root->data<x) return search(root->right,x);
+    bool ans = false;
+    if(root->data > x){
+        ans |= search(root->left, x);
+    }
+    else{
+        ans |= search(root->right, x);
+    }
     
-    return true;
+    return ans;
 }
