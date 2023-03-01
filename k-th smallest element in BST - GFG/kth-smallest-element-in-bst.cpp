@@ -1,4 +1,4 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
 #define MAX_HEIGHT 100000
@@ -76,7 +76,7 @@ Node* buildTree(string str) {
 }
 
 
- // } Driver Code Ends
+// } Driver Code Ends
 /*Complete the function below
 
 struct Node {
@@ -112,7 +112,7 @@ class Solution {
     }
 };
 
-// { Driver Code Starts.
+//{ Driver Code Starts.
 int main() {
 
     int t;
@@ -132,4 +132,5 @@ int main() {
         // cout<<"~"<<endl;
     }
     return 0;
-}  // } Driver Code Ends
+}
+// } Driver Code Ends
