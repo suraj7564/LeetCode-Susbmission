@@ -16,10 +16,13 @@
 <span style="font-size:18px"><strong>Output:</strong>
 60 70
 80 -1
-</span></pre>
 
-<p><span style="font-size:18px"><strong>Input:</strong><br>
-The first line of input contains an integer T denoting the number of test cases. Then T test cases follow. Each test case contains n denoting the number of edges of the BST. The next line contains the edges of the BST. The last line contains the key.</span></p>
+<strong>Explanation:</strong> In each test case first node is the root. Here, 50 is the root. Here, 50 30 L denotes that node having data 50 has its left child having data 30. Similarly, 30 20 L denotes that node having data 30 has its left child having data 20. Same goes for 30 40 R but here R means node 40 is right child of node 30. So, we can easily draw a bst and in first case, we have find predecessor and successor of 65. 
+Now, 65 need not to be present in the tree. Here, we can see 60 is its predecessor and 70 would be its successor. Please note that even if 65 were there in the tree, its predecessor and successor would have been the same because we don't count node itself as predecessor or successor.
+</span>
+</pre>
+
+<p>&nbsp;</p>
 
 <p><span style="font-size:18px"><strong>Output:</strong><br>
 Find the&nbsp;predecessor and successor of the&nbsp;key in BST and&nbsp;sets pre and suc as predecessor and successor, respectively Otherwise, set to NULL.</span></p>
