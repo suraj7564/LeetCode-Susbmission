@@ -1,7 +1,6 @@
 # Cutting Rectangles
-## Easy 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given a&nbsp;rectangle of dimensions <strong>L</strong>&nbsp;x&nbsp;<strong>B</strong>&nbsp;find the minimum number (<strong>N</strong>) of identical squares of maximum side that can be cut out&nbsp;from that rectangle so that no residue remains in the rectangle. Also find the dimension <strong>K</strong>&nbsp;of that square.</span></p>
+## Easy
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a&nbsp;rectangle of dimensions <strong>L</strong>&nbsp;x&nbsp;<strong>B</strong>&nbsp;find the minimum number (<strong>N</strong>) of identical squares of maximum side that can be cut out&nbsp;from that rectangle so that no residue remains in the rectangle. Also find the dimension <strong>K</strong>&nbsp;of that square.</span></p>
 
 <p><strong><span style="font-size:18px">Example 1:</span></strong></p>
 
@@ -28,5 +27,4 @@ You do not need to read input or print anything. Your task is to complete the fu
 <p><br>
 <span style="font-size:18px"><strong>Constraints:</strong><br>
 1 ≤ L, B ≤ 10<sup>9</sup></span></p>
- <p></p>
-            </div>
+</div>
