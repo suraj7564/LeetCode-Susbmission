@@ -1,10 +1,10 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 // Initial Template for C++
 
 #include <bits/stdc++.h>
 using namespace std;
 
- // } Driver Code Ends
+// } Driver Code Ends
 // User function Template for C++
 
 class Solution{
@@ -12,13 +12,13 @@ public:
     vector<long long int> minimumSquares(long long int L, long long int B)
     {
         // code here
-        long long g=__gcd(L,B);
-        long long k=((L/g)*(B/g));
-        return {k,g};
+        long long int gcd = __gcd(L, B);
+        long long int  n = (L/gcd) * (B/gcd);
+        return {n, gcd};
     }
 };
 
-// { Driver Code Starts.
+//{ Driver Code Starts.
 
 int main(){
     int t;
@@ -32,4 +32,5 @@ int main(){
         cout<<ans[0]<<" "<<ans[1]<<"\n";
     }
     return 0;
-}  // } Driver Code Ends
+}
+// } Driver Code Ends
