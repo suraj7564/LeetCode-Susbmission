@@ -12,22 +12,20 @@ class Solution {
   public:
     int noConseBits(int n) {
         // code here
-        int m = 0, cnt = 1;
+        int cnt = 0;
         for(int i=31;i>=0;i--){
             if((n & (1<<i))){
                 cnt++;
                 if(cnt == 3){
                     cnt = 0;
-                }
-                else{
-                    m |= (1<<i);
+                    n ^= (1<<i);
                 }
             }
             else{
                 cnt = 0;
             }
         }
-        return m;
+        return n;
     }
 };
 
