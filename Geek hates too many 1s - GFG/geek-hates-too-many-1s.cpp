@@ -17,8 +17,8 @@ class Solution {
             if((n & (1<<i))){
                 cnt++;
                 if(cnt == 3){
-                    cnt = 0;
                     n ^= (1<<i);
+                    cnt = 0;
                 }
             }
             else{
