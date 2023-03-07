@@ -97,19 +97,19 @@ class Solution{
     /*You are required to complete below method */
     int maxLevelSum(Node* root) {
         // Your code here
-        if(!root) return 0;
-        int ans = -1e9;
+        // 4 
+        int ans = INT_MIN;
         queue<Node*> q;
-        q.push(root);
+        if(root) q.push(root);
         while(!q.empty()){
             int sz = q.size();
             int cur = 0;
             while(sz-->0){
                 auto t = q.front();
                 q.pop();
-                cur += t->data;
-                if(t->left) q.push(t->left);
-                if(t->right) q.push(t->right);
+                cur += t -> data;
+                if(t -> left) q.push(t->left);
+                if(t -> right) q.push(t->right);
             }
             ans = max(ans, cur);
         }
