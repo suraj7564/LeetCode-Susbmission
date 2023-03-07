@@ -6,20 +6,32 @@ using namespace std;
 // } Driver Code Ends
 class Solution {
   public:
-    vector<int> asteroidCollision(int N, vector<int> &a) {
+    vector<int> asteroidCollision(int n, vector<int> &a) {
         // code here
-        stack<int> s1;
         vector<int> ans;
-        for(auto x:a){
-            if(x>0) s1.push(x);
-            else{
-                while(!s1.empty() && s1.top() > 0 && s1.top() < abs(x)) s1.pop();
-                if(!s1.empty() && s1.top() > 0 && s1.top() == abs(x)){
+        stack<int> s1;
+        for(int i=0;i<n;i++){
+            if(a[i] > 0){
+                s1.push(a[i]);
+                continue;
+            }
+            if(!s1.empty() && s1.top() > 0){
+                while(!s1.empty() && s1.top() < abs(a[i]) && s1.top() > 0){
                     s1.pop();
                 }
-                else if(s1.empty() || (!s1.empty() && s1.top() < 0)){
-                    s1.push(x);
+                if(!s1.empty() && s1.top() == abs(a[i])){
+                    s1.pop();
                 }
+                else{
+                    if(!s1.empty()){
+                        if(s1.top() < 0) s1.push(a[i]);
+                    }
+                    else
+                    s1.push(a[i]);
+                }
+            }
+            else{
+                s1.push(a[i]);
             }
         }
         while(!s1.empty()){
