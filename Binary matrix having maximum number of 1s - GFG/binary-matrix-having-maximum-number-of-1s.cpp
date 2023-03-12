@@ -11,27 +11,12 @@ using namespace std;
 
 class Solution {
 public:
-    vector<int> findMaxRow(vector<vector<int>> a, int N) {
+    vector<int> findMaxRow(vector<vector<int>> a, int n) {
         //code here
-        int l = 1, r = N, ans = 0, row = 0;
-        while(l <= r){
-            int m = (l + r)/2;
-            bool b = false;
-            int curRow = 0;
-            for(int j=0;j<N;j++){
-                if(a[j][N-m] == 1){
-                    b = true;
-                    curRow = j;
-                    break;
-                }
-            }
-            if(b){
-                ans = m;
-                row = curRow;
-                l = m + 1;
-            }
-            else{
-                r = m - 1;
+        int ans = 0, j = n - 1, row = 0;
+        for(int i=0;i<n;i++){
+            while(a[i][j] == 1 && j >= 0){
+                ans++, row = i, j--;
             }
         }
         return {row, ans};
