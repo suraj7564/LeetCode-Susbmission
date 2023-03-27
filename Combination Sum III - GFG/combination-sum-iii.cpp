@@ -6,15 +6,18 @@ using namespace std;
 // } Driver Code Ends
 class Solution {
   public:
-    void solve(int i, int k, int n, vector<int> cur, vector<vector<int>>& ans){
-        if(k == 0 && n == 0){
-            ans.push_back(cur);
+    void solve(int i, int k, int n, vector<int>& cur, vector<vector<int>>& ans){
+        if(n < 0) return;
+        if(n == 0){
+            if(k == 0)
+                ans.push_back(cur);
             return;
         }
-        if(k <= 0 || n <= 0 || i > 9) return;
-        solve(i + 1, k, n, cur, ans);
-        cur.push_back(i);
-        solve(i + 1, k - 1, n - i, cur, ans);
+        for(int j=i;j<=9;j++){
+            cur.push_back(j);
+            solve(j + 1, k - 1, n - j, cur, ans);
+            cur.pop_back();
+        }
     }
     vector<vector<int>> combinationSum(int K, int N) {
         // code here
