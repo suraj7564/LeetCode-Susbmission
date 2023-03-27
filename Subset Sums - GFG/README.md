@@ -1,7 +1,6 @@
 # Subset Sums
-## Easy
-<div class="problem-statement">
-                <p></p><div class="entry-content">
+## Medium
+<div class="problems_problem_content__Xm_eO"><div class="entry-content">
 <p><span style="font-size:18px">Given a&nbsp;list <strong>arr</strong>&nbsp;of <strong>N</strong> integers, print sums of all subsets in it.</span></p>
 
 <p>&nbsp;</p>
@@ -39,5 +38,4 @@ You don't need to read input or print anything. Your task is to complete the fun
 1 &lt;= N &lt;= 15<br>
 0 &lt;= arr[i] &lt;= 10<sup>4</sup></span></p>
 </div>
- <p></p>
-            </div>
+</div>
