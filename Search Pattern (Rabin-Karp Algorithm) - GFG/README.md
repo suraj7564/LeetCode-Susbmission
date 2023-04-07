@@ -1,7 +1,6 @@
 # Search Pattern (Rabin-Karp Algorithm)
-## Medium 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given two strings, one is a text string and other is a pattern string. The task is to print the indexes of all the occurences of pattern&nbsp;string in the text string. For printing, Starting Index of a string should be taken as&nbsp;1.</span></p>
+## Medium
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given two strings, one is a text string and other is a pattern string. The task is to print the indexes of all the occurences of pattern&nbsp;string in the text string. For printing, Starting Index of a string should be taken as&nbsp;1.</span></p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
@@ -36,5 +35,4 @@ You don't need to read input or print anything. Your task is to complete the fun
 1&lt;=|pat|&lt;|S|</span></p>
 
 <p>&nbsp;</p>
- <p></p>
-            </div>
+</div>
