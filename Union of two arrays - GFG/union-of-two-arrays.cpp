@@ -1,10 +1,10 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 //Initial template for C++
 
 #include <bits/stdc++.h>
 using namespace std;
 
- // } Driver Code Ends
+// } Driver Code Ends
 //User function template in C++
 
 class Solution{
@@ -12,18 +12,30 @@ class Solution{
     //Function to return the count of number of elements in union of two arrays.
     int doUnion(int a[], int n, int b[], int m)  {
         //code here
-        set<int> s1;
-        for(int i=0;i<n;i++){
-            s1.insert(a[i]);
+        int arr[m+n];
+        
+        for(int i=0;i<n;i++)
+            arr[i]=a[i];
+            
+        for(int i=n;i<m+n;i++)
+            arr[i]=b[i - n];
+            
+        sort(arr, arr+m+n);
+        
+        int ans = 1;
+        for(int i=0;i<m+n-1;i++)
+        {
+            if(arr[i]==arr[i+1])
+                continue;
+            else
+                ans++;
         }
-        for(int i=0;i<m;i++){
-            s1.insert(b[i]);
-        }
-        return s1.size();
+        
+        return ans;
     }
 };
 
-// { Driver Code Starts.
+//{ Driver Code Starts.
 
 int main() {
 	
@@ -47,4 +59,5 @@ int main() {
 	}
 	
 	return 0;
-}  // } Driver Code Ends
+}
+// } Driver Code Ends
