@@ -13,18 +13,43 @@ class Solution{
     {
         //Your code here
         //return vector with correct order of elements
-        set<int> s1;
-        for(int i=0;i<n;i++){
-            s1.insert(arr1[i]);
-        }
-        
-        for(int i=0;i<m;i++){
-            s1.insert(arr2[i]);
-        }
-        
+        int i = 0, j = 0;
         vector<int> ans;
-        for(auto x:s1){
-            ans.push_back(x);
+        while(i<n && j<m)
+        {
+            if(arr1[i]==arr2[j])
+            {
+                ans.push_back(arr1[i]);
+                int cur = arr1[i];
+                while(i < n && arr1[i] == cur) i++;
+                while(j < m && arr2[j] == cur) j++;
+            }
+            else if(arr1[i]>arr2[j])
+            {
+                ans.push_back(arr2[j]);
+                int cur = arr2[j];
+                while(j < m && arr2[j] == cur) j++;  
+            }
+            else
+            {
+                ans.push_back(arr1[i]);
+                int cur = arr1[i];
+                while(i < n && arr1[i] == cur) i++;
+            }
+        }
+        while(j<m)
+        {
+            ans.push_back(arr2[j]);
+            int cur = arr2[j];
+            while(j < m && arr2[j] == cur) j++;  
+        }
+        
+         while(i<n)
+        {
+            
+            ans.push_back(arr1[i]);
+            int cur = arr1[i];
+            while(i < n && arr1[i] == cur) i++;
         }
         
         return ans;
