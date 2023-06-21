@@ -82,41 +82,47 @@ Node *buildTree(string str) {
 // } Driver Code Ends
 //User function Template for C++
 
+/*
+struct Node {
+    int data;
+    Node *left;
+    Node *right;
+
+    Node(int val) {
+        data = val;
+        left = right = NULL;
+    }
+};
+*/
 class Solution {
   public:
-    vector<int> adj[10005];
-    void traverse(Node* root, int p){
-        if(!root) return;
-        if(p != -1) {
-            adj[p].push_back(root->data);
-            adj[root->data].push_back(p);
+    int ans = 0;
+    int find(Node* root, int target){
+        if(!root) return 0;
+        
+        int l = find(root -> left, target);
+        int r = find(root -> right, target);
+        
+        if(l < 0){
+            ans = max(ans, abs(l) + r + 1);
+            return l - 1;
         }
-        traverse(root->left, root->data);
-        traverse(root->right, root->data);
+        if(r < 0){
+            ans = max(ans, abs(r) + l + 1);
+            return r - 1;
+        }
+        
+        if(root -> data == target){
+            ans = max(ans, max(l, r) + 1);
+            return -1;
+        }
+        return max(l, r) + 1;
     }
     int minTime(Node* root, int target) 
     {
-        traverse(root, -1);
-        queue<int> q;
-        q.push(target);
-        vector<int> vis(10005, 0);
-        vis[target] = 1;
-        int l = -1;
-        while(!q.empty()){
-            int sz = q.size();
-            while(sz-->0){
-                auto t = q.front();
-                q.pop();
-                for(auto x:adj[t]){
-                    if(vis[x] == 0){
-                        vis[x] = 1;
-                        q.push(x);
-                    }
-                }
-            }
-            l++;
-        }
-        return l;
+        ans = 0;
+        find(root, target);
+        return ans - 1;
     }
 };
 
