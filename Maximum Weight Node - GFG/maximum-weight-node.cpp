@@ -7,24 +7,21 @@ using namespace std;
 //User function Template for C++
 class Solution
 {
-  public:
-  int maxWeightCell(int N, vector<int> Edge)
-  {
-      vector<int> ans(N, 0);
-      for(int i=0;i<N;i++){
-          if(Edge[i] != -1){
-              ans[Edge[i]] += i;
-          }
-      }
-      int res = 0, cur = 0;
-      for(int i=0;i<N;i++){
-          if(cur <= ans[i]){
-              cur = ans[i];
-              res = i;
-          }
-      }
-      return res;
-  }
+    public:
+    int maxWeightCell(int N, vector<int> a)
+    {
+        vector<int> ans(N, 0);
+        int res = 0, cur = 0;
+        for(int i=0;i<N;i++){
+            if(a[i] == -1) continue;
+            ans[a[i]] += i;
+            if(cur <= ans[a[i]]){
+                res = a[i];
+                cur = ans[a[i]];
+            }
+        }
+        return res;
+    }
 };
 
 //{ Driver Code Starts.
