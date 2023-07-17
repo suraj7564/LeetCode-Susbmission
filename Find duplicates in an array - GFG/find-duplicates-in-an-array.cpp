@@ -5,24 +5,23 @@ using namespace std;
 // } Driver Code Ends
 class Solution{
   public:
-    vector<int> duplicates(int a[], int n) {
-        // code here
+    vector<int> duplicates(int arr[], int n) {
         vector<int> ans;
-        sort(a, a + n);
-        for(int i=1;i<n;i++){
-            if(a[i] != a[i - 1]){
-                if(i > 1 && a[i - 1] == a[i - 2]){
-                    ans.push_back(a[i - 1]);
-                }
+        
+        unordered_map<int, int> m;
+        for(int i=0;i<n;i++){
+            m[arr[i]]++;
+        }
+        
+        for(auto x:m){
+            if(x.second > 1){
+                ans.push_back(x.first);
             }
         }
-        if(n > 1){
-            if(a[n - 1] == a[n - 2]){
-                ans.push_back(a[n - 1]);
-            }
-        }
+        
         if(ans.size() == 0) return {-1};
         
+        sort(ans.begin(), ans.end());
         return ans;
     }
 };
