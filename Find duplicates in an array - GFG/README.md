@@ -7,10 +7,7 @@
 </strong>N = 4
 a[] = {0,3,1,2}
 <strong>Output: </strong>-1<strong>
-Explanation: </strong>N=4 and all elements from 0
-to (N-1 = 3) are present in the given
-array. Therefore output is -1.</span>
-</pre>
+Explanation: </strong></span><span style="font-size: 14pt;">There is no repeating element in the array.</span><span style="box-sizing: inherit; font-size: 14pt;">Therefore output is -1.</span></pre>
 <p><span style="font-size: 18px;"><strong>Example 2:</strong></span></p>
 <pre><span style="font-size: 18px;"><strong>Input:
 </strong>N = 5
