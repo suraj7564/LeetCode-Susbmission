@@ -1,70 +1,58 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 #include<bits/stdc++.h>
 using namespace std;
 
- // } Driver Code Ends
-
-
-
+// } Driver Code Ends
 class Solution
 {
 	public:
 	//Function to find number of strongly connected components in the graph.
-	void dfs(int cur,vector<bool>& vis,stack<int>& s1,vector<int> adj[]){
-	    vis[cur] = true;
-	    
+	void dfs(int cur, vector<vector<int>>& adj, vector<int>& vis, stack<int>& st){
+	    vis[cur] = 1;
 	    for(auto x:adj[cur]){
-	        if(!vis[x]){
-	            dfs(x,vis,s1,adj);
+	        if(vis[x] == 0){
+	            dfs(x, adj, vis, st);
 	        }
 	    }
-	    
-	    s1.push(cur);
+	    st.push(cur);
 	}
-	
-	void dfs1(int cur,vector<bool>& vis,vector<int> adj[]){
-	    vis[cur] = false;
-	    
+	void dfs(int cur, vector<vector<int>>& adj, vector<int>& vis){
+	    vis[cur] = 0;
 	    for(auto x:adj[cur]){
-	        if(vis[x]){
-	            dfs1(x,vis,adj);
+	        if(vis[x] == 1){
+	            dfs(x, adj, vis);
 	        }
 	    }
 	}
-	
-    int kosaraju(int V, vector<int> adj[])
+    int kosaraju(int V, vector<vector<int>>& adj)
     {
-        vector<bool> vis(V,false);
-        stack<int> s1;
+        //code here
+        stack<int> st;
+        vector<int> vis(V, 0);
+        
+        vector<vector<int>> adj1(V);
         for(int i=0;i<V;i++){
-            if(!vis[i]){
-                dfs(i,vis,s1,adj);
+            if(vis[i] == 0){
+                dfs(i, adj, vis, st);
             }
-        }
-    
-        vector<int> adj1[V];
-        for(int i=0;i<V;i++){
             for(auto x:adj[i]){
                 adj1[x].push_back(i);
             }
         }
-        
         int ans = 0;
-        while(!s1.empty()){
-            int t = s1.top();
-            //cout<<t<<" ";
-            s1.pop();
-            if(vis[t]){
-                dfs1(t,vis,adj1);
+        while(!st.empty()){
+            auto t = st.top();
+            st.pop();
+            if(vis[t] == 1){
                 ans++;
+                dfs(t, adj1, vis);
             }
         }
-        
         return ans;
     }
 };
 
-// { Driver Code Starts.
+//{ Driver Code Starts.
 
 
 int main()
@@ -77,7 +65,7 @@ int main()
     	int V, E;
     	cin >> V >> E;
 
-    	vector<int> adj[V];
+    	vector<vector<int>> adj(V);
 
     	for(int i = 0; i < E; i++)
     	{
@@ -93,4 +81,5 @@ int main()
     return 0;
 }
 
-  // } Driver Code Ends
+
+// } Driver Code Ends
