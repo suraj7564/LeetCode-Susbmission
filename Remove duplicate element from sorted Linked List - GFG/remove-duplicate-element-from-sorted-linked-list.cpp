@@ -1,4 +1,4 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -51,7 +51,8 @@ int main() {
 		cout<<endl;
 	}
 	return 0;
-}// } Driver Code Ends
+}
+// } Driver Code Ends
 
 
 /*
@@ -81,5 +82,6 @@ Node *removeDuplicates(Node *head)
         }
         nxt = nxt->next;
     }
+    ans -> next = NULL;
     return head;
 }
