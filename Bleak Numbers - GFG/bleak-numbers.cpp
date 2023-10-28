@@ -1,14 +1,15 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 #include<bits/stdc++.h>
 using namespace std;
 
- // } Driver Code Ends
+// } Driver Code Ends
 class Solution
 {
 public:
 	int is_bleak(int n)
 	{
-	    for(int i=1;i<=n;i++){
+	    // Code here.
+	    for(int i=max(1, n-32);i<=n;i++){
 	        int cur=i+__builtin_popcount(i);
 	        if(cur==n) return 0;
 	    }
@@ -17,7 +18,7 @@ public:
 };
 
 
-// { Driver Code Starts.
+//{ Driver Code Starts.
 int main(){
     int T;
     cin >> T;
@@ -31,4 +32,5 @@ int main(){
     }
 	return 0;
 }
-  // } Driver Code Ends
+
+// } Driver Code Ends
