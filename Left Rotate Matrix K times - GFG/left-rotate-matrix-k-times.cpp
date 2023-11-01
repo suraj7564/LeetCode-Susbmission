@@ -11,17 +11,14 @@ class Solution {
   public:
     vector<vector<int>> rotateMatrix(int N, int M, int K,
                                      vector<vector<int>> Mat) {
-        vector<vector<int>> res(N);
         for(int i=0;i<N;i++){
             K %= M;
-            for(int j=K;j<M;j++){
-                res[i].push_back(Mat[i][j]);
-            }
-            for(int j=0;j<K;j++){
-                res[i].push_back(Mat[i][j]);
-            }
+            //Left Rotate Mat[i] by K
+            reverse(Mat[i].begin(), Mat[i].begin() + K);
+            reverse(Mat[i].begin() + K, Mat[i].end());
+            reverse(Mat[i].begin(), Mat[i].end());
         }
-        return res;
+        return Mat;
     }
 };
 
