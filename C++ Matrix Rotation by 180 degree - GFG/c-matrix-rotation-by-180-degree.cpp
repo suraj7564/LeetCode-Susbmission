@@ -7,21 +7,23 @@ using namespace std;
 
 class Solution {
 public:
-    void rotate90(vector<vector<int>>& a) {
-        int n = a.size();
+    //Function to rotate matrix anticlockwise by 90 degrees.
+    void rotateby90(vector<vector<int> >& matrix)
+    { 
+        int n = matrix.size();
         for(int i=0;i<n;i++){
-            for(int j=0;j<i;j++){
-                swap(a[i][j], a[j][i]);
+            for(int j=0;j<n-i;j++){
+                swap(matrix[i][j], matrix[n - j - 1][n - i - 1]);
             }
         }
         for(int i=0;i<n;i++){
-            reverse(a[i].begin(), a[i].end());
+            reverse(matrix[i].begin(), matrix[i].end());
         }
-    }
+    } 
     void rotate(vector<vector<int> >& matrix) {
         // Code here
-        rotate90(matrix);
-        rotate90(matrix);
+        rotateby90(matrix);
+        rotateby90(matrix);
     }
 };
 
