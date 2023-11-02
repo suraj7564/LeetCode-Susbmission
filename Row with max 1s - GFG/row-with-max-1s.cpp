@@ -6,28 +6,27 @@ using namespace std;
 //User function template for C++
 class Solution{
 public:
-	int rowWithMax1s(vector<vector<int> > arr, int n, int m) {
+	int rowWithMax1s(vector<vector<int> > a, int n, int m) {
 	    // code here
-	    int mx=INT_MIN,count=0;
-	    int a[n];
+	    int ans = 0, row = -1;
 	    for(int i=0;i<n;i++){
-	        count=0;
-	        for(int j=0;j<m;j++){
-	            if(arr[i][j]==1){
-	                count++;
-	            }
-	        }
-	        mx=max(mx,count);
-	        a[i]=count;
+	        int l = 0, r = m - 1, cnt = -1;
+		    while(l <= r){
+		        int mid = (l + r)/2;
+		        if(a[i][mid] == 0){
+		            cnt = mid;
+		            l = mid + 1;
+		        }
+		        else{
+		            r = mid - 1;
+		        }
+		    }
+		    if(ans < m - cnt - 1){
+		        ans = m - cnt - 1;
+		        row = i;
+		    }
 	    }
-	    if(mx>0){
-	        for(int i=0;i<n;i++){
-	            if(a[i]==mx){
-	                return i;
-	        }
-	    }
-	    }
-	    return -1;
+	    return row;
 	}
 
 };
