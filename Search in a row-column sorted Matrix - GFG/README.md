@@ -1,7 +1,6 @@
 # Search in a row-column sorted Matrix
-##  Medium 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given a matrix of size&nbsp;n x m, where every row and column is<strong> sorted in increasing order</strong>, and a number <strong>x.</strong>&nbsp;Find whether&nbsp;element x&nbsp;is present in the matrix or not.</span><br>
+## Medium
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a matrix of size&nbsp;n x m, where every row and column is<strong> sorted in increasing order</strong>, and a number <strong>x.</strong>&nbsp;Find whether&nbsp;element x&nbsp;is present in the matrix or not.</span><br>
 <br>
 <span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
@@ -36,5 +35,4 @@ You don't need to read input or print anything. Complete the function <strong>se
 1 &lt;= N, M &lt;= 1000<br>
 1 &lt;= mat[][] &lt;= 10<sup>5</sup><br>
 1 &lt;= X &lt;= 1000</span></p>
- <p></p>
-            </div>
+</div>
