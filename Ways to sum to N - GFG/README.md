@@ -1,7 +1,6 @@
 # Ways to sum to N
-## Medium 
-<div class="problem-statement">
-                <p></p><p><span style="font-size:18px">Given a set of m distinct positive integers and a value ‘N’. Count the total number of ways we can form ‘N’ by&nbsp;&nbsp;adding&nbsp;the array elements. Repetitions and different arrangements are allowed.<br>
+## Medium
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a set of m distinct positive integers and a value ‘N’. Count the total number of ways we can form ‘N’ by&nbsp;&nbsp;adding&nbsp;the array elements. Repetitions and different arrangements are allowed.<br>
 <strong>Note: </strong>Answer can be quite large&nbsp;output the answer modulo 10<sup>9</sup>+7.</span></p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
@@ -43,5 +42,4 @@ You don't need to read input or print anything. Your task is to complete the fun
 <p><br>
 <span style="font-size:18px"><strong>Constraints:</strong><br>
 1 &lt;= N , m &lt;= 10<sup>3</sup></span></p>
- <p></p>
-            </div>
+</div>
